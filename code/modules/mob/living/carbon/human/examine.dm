@@ -560,6 +560,7 @@
 				. += span_notice("Inscryption[N ? " by [N]'s " : ""][W ? "Wonder #[W]" : ""]: [K ? K : ""]")
 
 	if(!obscure_name) // Miniature headshot on examine
+
 		if(headshot_link)
 			. += "<span class='info'><img src=[headshot_link] width=100 height=100/></span>"
 
@@ -594,6 +595,7 @@
 			user.add_stress(/datum/stressevent/hunted)
 
 	if(!obscure_name && (flavortext || headshot_link)) // only show flavor text if there is a flavor text and we show headshot
+
 		. += "<a href='?src=[REF(src)];task=view_flavor_text;'>Examine Closer</a>"
 
 	var/trait_exam = common_trait_examine()

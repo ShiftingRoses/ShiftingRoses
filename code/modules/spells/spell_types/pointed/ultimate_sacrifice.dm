@@ -27,7 +27,7 @@
 		to_chat(owner, span_warning("Necra holds tight to this one."))
 		return
 
-	var/confirm = browser_alert(owner, "Your life will be sacrificed to revive [cast_on.real_name]. You CANNOT be revived after this. Are you absolutely sure?", "Ultimate Sacrifice", list("Sacrifice Myself", "Cancel"))
+	var/confirm = browser_alert(owner, "Your life will be sacrificed to revive [cast_on.real_name]. You CANNOT be revived after this. Are you absolutely sure?", "Ultimate Sacrifice", "Sacrifice Myself", "Cancel")
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return
 

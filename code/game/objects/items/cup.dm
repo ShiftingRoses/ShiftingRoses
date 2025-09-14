@@ -21,6 +21,10 @@
 	fillsounds = list('sound/items/fillcup.ogg')
 	gripped_intents = list(INTENT_POUR)
 
+/obj/item/reagent_containers/glass/cup/Initialize(mapload, vol)
+	. = ..()
+	AddComponent(/datum/component/storage/concrete/grid/cup)
+
 /obj/item/reagent_containers/glass/cup/wooden
 	name = "wooden cup"
 	desc = "A wooden cup that has seen it's fair share of use and barfights."

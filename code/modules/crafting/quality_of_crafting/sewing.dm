@@ -607,6 +607,14 @@
 	craftdiff = 3
 	category = "Cloak"
 
+/datum/repeatable_crafting_recipe/sewing/cape/shredded
+	name = "shredded cloak"
+	output = /obj/item/clothing/cloak/shredded
+	requirements = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
+	category = "Cloak"
+
 /datum/repeatable_crafting_recipe/sewing/guard_cape
 	name = "guard cape"
 	output = /obj/item/clothing/cloak/cape/guard

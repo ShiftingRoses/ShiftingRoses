@@ -312,3 +312,16 @@
 	item_state = "silktabard"
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	allowed_ages = ALL_AGES_LIST //placeholder until younglings have onmob sprites for this item
+
+/obj/item/clothing/cloak/shredded
+	name = "shredded cloak"
+	desc = "A shredded long cloak."
+	icon_state = "shredded"
+	item_state = "shredded"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+	allowed_race = SPECIES_BASE_BODY

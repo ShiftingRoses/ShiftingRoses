@@ -253,6 +253,16 @@
 	output = /obj/structure/closet/crate/chest/wicker
 	craftdiff = 1
 
+/datum/repeatable_crafting_recipe/survival/wicker_handbasket
+	name = "wicker handbasket"
+	requirements = list(
+		/obj/item/natural/fibers = 3,
+	)
+	attacked_atom = /obj/item/natural/fibers
+	starting_atom  = /obj/item/natural/fibers
+	output = /obj/item/storage/handbasket
+	craftdiff = 1
+
 /datum/repeatable_crafting_recipe/survival/bone_spear
 	name = "bone spear"
 	requirements = list(

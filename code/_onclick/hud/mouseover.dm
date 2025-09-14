@@ -45,7 +45,10 @@
 		if(AM.screen_loc)
 			mouse_over.screen_loc = AM.screen_loc
 	if(!mouse_over.screen_loc)
-		var/list/screen_loc_params = splittext(LAZYACCESS(modifiers, SCREEN_LOC), ",")
+		var/screen_loc = LAZYACCESS(modifiers, SCREEN_LOC)
+		if(!screen_loc)
+			return
+		var/list/screen_loc_params = splittext(screen_loc, ",")
 		var/world_x = LAZYACCESS(splittext(screen_loc_params[1], ":"), 1)
 		var/world_y = LAZYACCESS(splittext(screen_loc_params[2], ":"), 1)
 		mouse_over.screen_loc = "[world_x]:0,[world_y]:0"

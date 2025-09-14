@@ -110,6 +110,18 @@
 	allow_dump_out = TRUE
 	insert_preposition = "in"
 
+/datum/component/storage/concrete/grid/handbasket
+	max_w_class = WEIGHT_CLASS_NORMAL
+	screen_max_rows = 3
+	screen_max_columns = 3
+	click_gather = TRUE
+	collection_mode = COLLECT_EVERYTHING
+	dump_time = 0
+	allow_quick_gather = TRUE
+	allow_quick_empty = TRUE
+	allow_dump_out = TRUE
+	insert_preposition = "in"
+
 /datum/component/storage/concrete/grid/sack/meat/New(datum/P, ...)
 	. = ..()
 	set_holdable(list(
@@ -245,6 +257,31 @@
 	screen_max_rows = 1
 	screen_max_columns = 5
 	max_w_class = WEIGHT_CLASS_HUGE
+
+/datum/component/storage/concrete/grid/cup
+	screen_max_rows = 2
+	screen_max_columns = 1
+	max_w_class = WEIGHT_CLASS_TINY
+
+/datum/component/storage/concrete/grid/bucket
+	screen_max_rows = 4
+	screen_max_columns = 2
+	max_w_class = WEIGHT_CLASS_NORMAL
+
+/datum/component/storage/concrete/grid/bucket/New(datum/P, ...)
+	. = ..()
+	//the idea is as follows
+	//the bucket can hold items that you can put in, and reliably pull out without having to toss everything out
+	//so no coins or fibres, they are too small and would get stuck at the bottom
+	set_holdable(list(
+		/obj/item/reagent_containers/food/snacks/fish,
+		/obj/item/natural/worms,
+		/obj/item/natural/bundle/worms,
+		/obj/item/fishing/bait,
+		/obj/item/grown/log/tree/stick,
+		/obj/item/natural/bundle/stick,
+		/obj/item/weapon/knife,//wouldn't it be cool to smuggle a knife somewhere via a bucket?
+		))
 
 /datum/component/storage/concrete/grid/food/cooking
 	max_w_class = WEIGHT_CLASS_HUGE
