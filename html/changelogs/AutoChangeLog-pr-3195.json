@@ -1,1 +1,0 @@
-{"author":"Bloo4420","delete-after":true,"changes":[{"rscadd":"Craftable wicker handbaskets with unique content sprites"},{"code_imp":"changed 3 instances of (things.len) in bags.dm to instead be (length(things)) to be in line with other code."}]}

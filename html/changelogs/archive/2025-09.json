@@ -413,5 +413,66 @@
                 "admin": "subtle messages are more visible to the player"
             }
         ]
+    },
+    "2025-09-15": {
+        "Wouju": [
+            {
+                "rscadd": "Buckets can hold fish and fishing related bait, cups can hold tiny items"
+            },
+            {
+                "rscadd": "Buckets transfer 10 units instead of 9"
+            },
+            {
+                "rscadd": "angler and clownfish taste improved, they are still quite crap for nobles (except clownfish, they are fine)"
+            },
+            {
+                "rscadd": "Added craftable dice cups and dice"
+            }
+        ],
+        "Just-Sim": [
+            {
+                "rscdel": "Deleted patreon lock on races and headshots."
+            },
+            {
+                "rscadd": "Headshot Miniature on Examine"
+            },
+            {
+                "rscadd": "A headshot miniature, if you possess one."
+            }
+        ],
+        "Bloo4420": [
+            {
+                "rscadd": "Craftable wicker handbaskets with unique content sprites"
+            },
+            {
+                "code_imp": "changed 3 instances of (things.len) in bags.dm to instead be (length(things)) to be in line with other code."
+            }
+        ],
+        "DrSirKnight": [
+            {
+                "rscadd": "Two new wretch subclasses, Rouschild and Rejected Royal"
+            }
+        ],
+        "dwasint": [
+            {
+                "rscadd": "composters can now be clicked on with a shovel to bulk remove compost"
+            }
+        ],
+        "CheffieGithub": [
+            {
+                "bugfix": "Fixed biting applying limb damage twice."
+            },
+            {
+                "balance": "You can bite head sub zones except cranium, hands, feet and groin to do biting crits or have strong bite. Assuming your bite does more than 10 damage."
+            }
+        ],
+        "snowyseshi": [
+            {
+                "rscadd": "watch boots with a special footstep noise + change footman cudgel to iron mace"
+            },
+            {
+                "sound": "added heavy footstep sound"
+            }
+        ]
     }
 }
