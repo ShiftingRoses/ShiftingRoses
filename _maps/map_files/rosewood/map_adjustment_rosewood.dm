@@ -5,8 +5,8 @@
 */
 
 #define POINTY_EARS list(\
-	"Elf",\
-	"Half-Elf"\
+	SPEC_ID_ELF,\
+	SPEC_ID_HALF_ELF\
 )
 
 /datum/map_adjustment/rosewood

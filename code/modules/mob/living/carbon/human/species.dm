@@ -2238,19 +2238,19 @@ GLOBAL_LIST_EMPTY(patreon_races)
 /datum/species/proc/apply_heat_debuffs(mob/living/carbon/human/H, level)
 	switch(level)
 		if(1)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot, 1)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot)
 			// Mild heat stress - slight stamina drain
 			if(!H.temp_debuff_level || H.temp_debuff_level < 1)
 				H.temp_debuff_level = 1
 				H.adjust_hydration(-HUNGER_FACTOR * 0.5)
 		if(2)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot, 2)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot)
 			// Moderate heat stress - stamina drain + slight slowdown
 			if(!H.temp_debuff_level || H.temp_debuff_level < 2)
 				H.temp_debuff_level = 2
 				H.adjust_hydration(-HUNGER_FACTOR)
 		if(3)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot, 3)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/hot)
 			// Severe heat stress - major stamina drain + significant slowdown
 			if(!H.temp_debuff_level || H.temp_debuff_level < 3)
 				H.temp_debuff_level = 3
@@ -2259,21 +2259,21 @@ GLOBAL_LIST_EMPTY(patreon_races)
 /datum/species/proc/apply_cold_debuffs(mob/living/carbon/human/H, level, cold_deficit)
 	switch(level)
 		if(1)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold, 1)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold)
 			// Mild cold - slight movement slowdown
 			H.add_movespeed_modifier(MOVESPEED_ID_COLD, override = TRUE,
 				multiplicative_slowdown = (cold_deficit / COLD_SLOWDOWN_FACTOR) * 0.5,
 				blacklisted_movetypes = FLOATING)
 			H.temp_debuff_level = 1
 		if(2)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold, 2)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold)
 			// Moderate cold - movement slowdown + reduced dexterity
 			H.add_movespeed_modifier(MOVESPEED_ID_COLD, override = TRUE,
 				multiplicative_slowdown = (cold_deficit / COLD_SLOWDOWN_FACTOR) * 0.8,
 				blacklisted_movetypes = FLOATING)
 			H.temp_debuff_level = 2
 		if(3)
-			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold, 3)
+			H.throw_alert("temp", /atom/movable/screen/alert/status_effect/debuff/cold)
 			// Severe cold - major slowdown + hypothermia effects
 			H.add_movespeed_modifier(MOVESPEED_ID_COLD, override = TRUE,
 				multiplicative_slowdown = cold_deficit / COLD_SLOWDOWN_FACTOR,

@@ -187,6 +187,8 @@
 	if(SSParticleWeather.runningWeather)
 		ambient_temperature += SSParticleWeather.runningWeather?.temperature_modification
 	if(ambient_temperature < 15 && (outdoor_effect?.weatherproof || !outdoor_effect))
+		if(ambient_temperature < 0)
+			ambient_temperature = 0
 		ambient_temperature += 10
 	if(!("[z]" in GLOB.cellar_z))
 		if(SSmapping.level_has_any_trait(z, list(ZTRAIT_CELLAR_LIKE)))
