@@ -127,6 +127,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define INDESTRUCTIBLE	(1<<6)
 /// can't be frozen
 #define FREEZE_PROOF	(1<<7)
+/// can't be moved by explosions, this one is excluded from everything proof
+#define EXPLOSION_MOVE_PROOF (1<<8)
 
 #define EVERYTHING_PROOF (LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | INDESTRUCTIBLE | FREEZE_PROOF)
 

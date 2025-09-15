@@ -760,6 +760,14 @@
 	},
 /turf/open/water/cleanshallow,
 /area/rogue/indoors/town/manor/phys)
+"auj" = (
+/obj/structure/door/viewport{
+	dir = 8;
+	name = "Stockpiles"
+	},
+/obj/effect/mapping_helpers/access/keyset/manor/vault,
+/turf/open/floor/tile,
+/area/rogue/indoors/town/vault)
 "auu" = (
 /obj/structure/fake_machine/atm,
 /turf/open/floor/dirt,
@@ -7856,14 +7864,6 @@
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor/captain)
-"eDu" = (
-/obj/structure/door/viewport{
-	dir = 4;
-	name = "Metals"
-	},
-/obj/effect/mapping_helpers/access/keyset/manor/vault,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "eDF" = (
 /turf/closed/wall/mineral/stone,
 /area/rogue/indoors/town/clocktower)
@@ -8492,6 +8492,10 @@
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/tile/bfloorz,
 /area/rogue/indoors/town/manor/halls/w)
+"eWs" = (
+/obj/projectile/bullet/reusable/cannonball,
+/turf/open/floor/blocks/stonered,
+/area/rogue/under/town/basement)
 "eWt" = (
 /obj/machinery/light/fueled/torchholder{
 	dir = 1
@@ -10344,6 +10348,14 @@
 	pixel_x = 32
 	},
 /turf/open/floor/ruinedwood/spiralfade,
+/area/rogue/under/town/basement)
+"fXT" = (
+/obj/structure/door/viewport{
+	dir = 4;
+	name = "Metals"
+	},
+/obj/effect/mapping_helpers/access/keyset/manor/vault,
+/turf/open/floor/cobble,
 /area/rogue/under/town/basement)
 "fYj" = (
 /obj/machinery/light/fueled/wallfire/candle{
@@ -16368,6 +16380,17 @@
 "jKC" = (
 /turf/closed/wall/mineral/wood,
 /area/rogue/outdoors/town)
+"jKK" = (
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/obj/item/fuse/parchment,
+/turf/open/floor/blocks/stonered,
+/area/rogue/under/town/basement)
 "jKL" = (
 /obj/structure/closet/crate/crafted_closet,
 /obj/item/natural/cloth,
@@ -18627,6 +18650,10 @@
 "ljN" = (
 /turf/open/floor/ruinedwood,
 /area/rogue/indoors/town/merc_guild)
+"ljU" = (
+/obj/structure/stockpile_storage/metal,
+/turf/open/floor/cobble,
+/area/rogue/under/town/basement)
 "lkg" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie{
 	dir = 1
@@ -20364,6 +20391,10 @@
 /obj/structure/door/stone,
 /turf/open/floor/churchmarble,
 /area/rogue/indoors/town/church)
+"mvX" = (
+/obj/structure/stockpile_storage,
+/turf/open/floor/cobble,
+/area/rogue/under/town/basement)
 "mwv" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/blocks/stonered/tiny,
@@ -20509,6 +20540,10 @@
 "mAr" = (
 /turf/open/floor/herringbone,
 /area/rogue/indoors/town/manor/captain)
+"mAJ" = (
+/obj/structure/stockpile_storage/food,
+/turf/open/floor/cobble,
+/area/rogue/under/town/basement)
 "mAU" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/dirt,
@@ -20797,10 +20832,6 @@
 /obj/machinery/light/fueled/torchholder,
 /turf/open/floor/grass,
 /area/rogue/outdoors/town)
-"mIa" = (
-/obj/structure/bars,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "mIk" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -21361,6 +21392,12 @@
 /obj/structure/chair/bench,
 /turf/open/floor/cobblerock,
 /area/rogue/outdoors/town)
+"mYl" = (
+/obj/item/reagent_containers/glass/bottle/aflask,
+/obj/item/reagent_containers/glass/bottle/aflask,
+/obj/item/reagent_containers/glass/bottle/aflask,
+/turf/open/floor/blocks/stonered/tiny,
+/area/rogue/under/town/basement)
 "mYn" = (
 /obj/structure/bars/pipe{
 	dir = 4;
@@ -22389,6 +22426,10 @@
 "nFw" = (
 /turf/closed/wall/mineral/pipe,
 /area/rogue/indoors/town/smithy)
+"nFA" = (
+/obj/structure/cannon,
+/turf/open/floor/blocks/stonered/tiny,
+/area/rogue/under/town/basement)
 "nFD" = (
 /obj/structure/flora/grass,
 /turf/open/water/cleanshallow/dirt,
@@ -25507,10 +25548,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town)
-"pBY" = (
-/obj/structure/stockpile_storage/metal,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "pCd" = (
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/dirt,
@@ -27399,14 +27436,6 @@
 	},
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors/town)
-"qNH" = (
-/obj/structure/door/viewport{
-	dir = 8;
-	name = "Stockpiles"
-	},
-/obj/effect/mapping_helpers/access/keyset/manor/vault,
-/turf/open/floor/tile,
-/area/rogue/indoors/town/vault)
 "qOe" = (
 /obj/structure/table/wood/counter/end{
 	dir = 1
@@ -29549,10 +29578,6 @@
 /obj/structure/hotspring/border/ten,
 /turf/open/floor/grass/eora,
 /area/rogue/outdoors/eora)
-"shR" = (
-/obj/structure/mannequin/male/decorative,
-/turf/open/floor/blocks/stonered/tiny,
-/area/rogue/under/town/basement)
 "shZ" = (
 /obj/item/paper,
 /obj/item/paper,
@@ -31232,14 +31257,6 @@
 	},
 /turf/open/floor/cobble,
 /area/rogue/under/town/basement)
-"teP" = (
-/obj/structure/door/viewport{
-	dir = 8;
-	name = "Food and Materials"
-	},
-/obj/effect/mapping_helpers/access/keyset/manor/vault,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "tfe" = (
 /obj/structure/closet/crate/crafted_closet/dark,
 /obj/item/weapon/sword/scimitar/messer,
@@ -31784,10 +31801,6 @@
 	},
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/magician)
-"tum" = (
-/obj/structure/mannequin/male/female,
-/turf/open/floor/blocks/stonered/tiny,
-/area/rogue/under/town/basement)
 "tup" = (
 /obj/effect/waterfall,
 /obj/effect/waterfall{
@@ -35596,10 +35609,6 @@
 	},
 /turf/open/floor/cobble,
 /area/rogue/indoors/dungeon)
-"vSh" = (
-/obj/structure/stockpile_storage,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "vSJ" = (
 /obj/structure/table/wood/plain_alt,
 /obj/item/natural/cloth,
@@ -36355,10 +36364,6 @@
 "wpK" = (
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor/garrison)
-"wpQ" = (
-/obj/structure/stockpile_storage/food,
-/turf/open/floor/cobble,
-/area/rogue/under/town/basement)
 "wqd" = (
 /obj/machinery/light/fueled/firebowl,
 /turf/open/floor/blocks,
@@ -37393,6 +37398,10 @@
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /turf/open/floor/hexstone,
 /area/rogue/indoors/town/church)
+"wWM" = (
+/obj/structure/bars,
+/turf/open/floor/cobble,
+/area/rogue/under/town/basement)
 "wXy" = (
 /obj/structure/roguerock{
 	icon_state = "rock2"
@@ -39283,6 +39292,14 @@
 	},
 /turf/open/water/river,
 /area/rogue/under/cavewet)
+"yfu" = (
+/obj/structure/door/viewport{
+	dir = 8;
+	name = "Food and Materials"
+	},
+/obj/effect/mapping_helpers/access/keyset/manor/vault,
+/turf/open/floor/cobble,
+/area/rogue/under/town/basement)
 "yfN" = (
 /obj/structure/chair/wood/alt/chair_noble/red,
 /obj/effect/decal/cobbleedge{
@@ -59887,7 +59904,7 @@ vgJ
 vgJ
 vgJ
 tHe
-wpQ
+mAJ
 jKy
 iRT
 aLp
@@ -60293,7 +60310,7 @@ vgJ
 tHe
 iRT
 iRT
-vSh
+mvX
 aLp
 mwG
 cZh
@@ -60493,9 +60510,9 @@ vgJ
 tHe
 tHe
 tHe
-mIa
-teP
-mIa
+wWM
+yfu
+wWM
 aLp
 aLp
 aLp
@@ -61097,12 +61114,12 @@ jUb
 fkZ
 vgJ
 tHe
-mIa
-eDu
-mIa
+wWM
+fXT
+wWM
 mcU
 mcU
-qNH
+auj
 mcU
 mcU
 mcU
@@ -61502,7 +61519,7 @@ fkZ
 vgJ
 tHe
 uyK
-pBY
+ljU
 iRT
 mcU
 xaU
@@ -64344,7 +64361,7 @@ nCG
 nCG
 vzn
 vzn
-tum
+nFA
 tHe
 kHz
 gBh
@@ -64545,7 +64562,7 @@ tHe
 jYU
 hWm
 sCQ
-sCQ
+eWs
 awC
 tHe
 bET
@@ -64747,7 +64764,7 @@ tHe
 jYU
 nCG
 sCQ
-sCQ
+jKK
 awC
 tHe
 bYk
@@ -64950,7 +64967,7 @@ rJR
 hWm
 sCQ
 sCQ
-shR
+mYl
 tHe
 tHe
 tHe

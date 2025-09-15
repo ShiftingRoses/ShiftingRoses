@@ -270,6 +270,14 @@
 	i_type = "Ammo"
 	category = "Ammo"
 
+/datum/artificer_recipe/ammo/cannon_ball
+	name = "Lead Cannonball (+3 Iron)"
+	created_item = /obj/item/ammo_casing/caseless/cball
+	required_item = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/ingot/iron, /obj/item/ingot/iron)
+	hammers_per_item = 6
+	craftdiff = 5
+
 /datum/artificer_recipe/ammo/lead_bullet
 	name = "Lead Bullets 4x"
 	hammers_per_item = 4

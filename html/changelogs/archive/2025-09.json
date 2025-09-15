@@ -415,6 +415,11 @@
         ]
     },
     "2025-09-15": {
+        "grungussuss": [
+            {
+                "rscadd": "Added a cannon"
+            }
+        ],
         "Wouju": [
             {
                 "rscadd": "Buckets can hold fish and fishing related bait, cups can hold tiny items"
@@ -451,6 +456,11 @@
         "DrSirKnight": [
             {
                 "rscadd": "Two new wretch subclasses, Rouschild and Rejected Royal"
+            }
+        ],
+        "Just-Sim": [
+            {
+                "rscadd": "A headshot miniature, if you possess one."
             }
         ],
         "dwasint": [

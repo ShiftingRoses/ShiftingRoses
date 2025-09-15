@@ -212,7 +212,7 @@
 	craftdiff = 0
 	blacklisted_paths = list(/obj/item/natural/hide/cured)
 
-/datum/repeatable_crafting_recipe/parchment2
+/datum/repeatable_crafting_recipe/parchment/wood
 	name = "parchment (timber)"
 	output = /obj/item/paper
 	output_amount = 4
@@ -231,6 +231,20 @@
 	craft_time = 1.5 SECONDS
 	crafting_message = "starts making some parchment"
 	craftdiff = 0
+
+/datum/repeatable_crafting_recipe/parchment/fuse
+	name = "parchment fuse"
+	requirements = list(
+		/obj/item/paper = 1,
+	)
+	tool_usage = list(
+		/obj/item/weapon/knife = list(span_notice("starts to cut"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
+	)
+	reagent_requirements = null
+	attacked_atom = /obj/item/paper
+	starting_atom = /obj/item/weapon/knife
+	output = /obj/item/fuse/parchment
+	craft_time = 2 SECONDS
 
 /datum/repeatable_crafting_recipe/tiefsugar
 	name = "tiefling sugar"

@@ -830,7 +830,6 @@
 /atom/movable/screen/alert/status_effect/debuff/cold
 	name = "Cold"
 	desc = "Something has chilled me to the bone! It's hard to move."
-	icon_state = "muscles"
 
 /datum/status_effect/buff/nocblessing
 	id = "nocblessing"

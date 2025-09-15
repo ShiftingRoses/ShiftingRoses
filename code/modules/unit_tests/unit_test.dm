@@ -149,6 +149,8 @@ GLOBAL_LIST_EMPTY(required_map_items)
 		/obj/merge_conflict_marker,
 		///this object exists purely to create a template spawning it in is nah
 		/obj/effect/landmark/house_spot,
+		/// stuff in this sets everyting in initialize args
+		/obj/effect/fuse,
 		///shit that calls explosion() should probably not be called in empty space
 		/obj/effect/temp_visual/target/meteor
 	)

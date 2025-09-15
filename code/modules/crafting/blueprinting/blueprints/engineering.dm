@@ -123,3 +123,16 @@
 	)
 	supports_directions = TRUE
 	craftdiff = 3
+
+/datum/blueprint_recipe/engineering/cannon
+	name = "Cannon"
+	desc = "A powerful blackpowder weapon."
+	result_type = /obj/structure/cannon
+	required_materials = list(
+		/obj/item/ingot/steel = 3,
+		/obj/item/gear/metal = 4,
+		/obj/item/grown/log/tree/small = 4,
+	)
+	supports_directions = TRUE
+	craftdiff = 5
+

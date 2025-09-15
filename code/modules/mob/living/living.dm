@@ -333,13 +333,13 @@
 	if(!client && (mob_size < MOB_SIZE_SMALL))
 		return
 	now_pushing = TRUE
-	var/t = get_dir(src, AM)
+	var/dir_to_pushed = get_dir(src, AM)
 	var/push_anchored = FALSE
 	if((AM.move_resist * MOVE_FORCE_CRUSH_RATIO) <= force)
-		if(move_crush(AM, move_force, t))
+		if(move_crush(AM, move_force, dir_to_pushed))
 			push_anchored = TRUE
 	if((AM.move_resist * MOVE_FORCE_FORCEPUSH_RATIO) <= force)			//trigger move_crush and/or force_push regardless of if we can push it normally
-		if(force_push(AM, move_force, t, push_anchored))
+		if(force_push(AM, move_force, dir_to_pushed, push_anchored))
 			push_anchored = TRUE
 	if((AM.anchored && !push_anchored) || (force < (AM.move_resist * MOVE_FORCE_PUSH_RATIO)))
 		now_pushing = FALSE
@@ -348,10 +348,8 @@
 	var/current_dir
 	if(isliving(AM))
 		current_dir = AM.dir
-	if(AM.Move(get_step(AM.loc, t), t, glide_size))
-		Move(get_step(loc, t), t)
-	if(current_dir)
-		AM.setDir(current_dir)
+	if(AM.pushed(get_step(AM.loc, dir_to_pushed), dir_to_pushed, glide_size, current_dir))
+		Move(get_step(loc, dir_to_pushed), dir_to_pushed)
 	now_pushing = FALSE
 
 /mob/living/carbon/can_be_pulled(user, grab_state, force)

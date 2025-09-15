@@ -121,6 +121,14 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isweapon(A) (istype(A, /obj/item/weapon))
 
+#define isammo(A) (istype(A, /obj/item/ammo_casing))
+
+#define isreagentcontainer(A) (istype(A, /obj/item/reagent_containers))
+
+#define ismobholder(A) (istype(A, /obj/item/clothing/head/mob_holder))
+
+#define isfuse(A) (istype(A, /obj/item/fuse))
+
 #define isscabbard(A) (istype(A, /obj/item/weapon/scabbard))
 
 #define isstructure(A) (istype(A, /obj/structure))

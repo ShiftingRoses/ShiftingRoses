@@ -1297,7 +1297,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 			dropped(M, TRUE)
 	return ..()
 
-/obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=TRUE, diagonals_first = FALSE, datum/callback/callback, gentle = FALSE)
+/obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=TRUE, diagonals_first = FALSE, datum/callback/callback, force, gentle = FALSE)
 	if(HAS_TRAIT(src, TRAIT_NODROP))
 		return
 	return ..()

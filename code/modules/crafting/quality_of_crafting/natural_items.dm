@@ -93,6 +93,19 @@
 	output = /obj/item/weapon/hammer/wood
 	craft_time = 5 SECONDS
 
+/datum/repeatable_crafting_recipe/survival/fiber_fuse
+	name = "fiber fuse"
+	requirements = list(
+		/obj/item/natural/fibers = 2,
+	)
+	tool_usage = list(
+		/obj/item/weapon/knife = list(span_notice("starts to cut"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
+	)
+	attacked_atom = /obj/item/natural/fibers
+	starting_atom = /obj/item/weapon/knife
+	output = /obj/item/fuse/fiber
+	craft_time = 2 SECONDS
+
 /datum/repeatable_crafting_recipe/survival/woodclub
 	name = "wood club"
 	requirements = list(
