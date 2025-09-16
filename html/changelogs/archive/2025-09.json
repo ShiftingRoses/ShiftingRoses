@@ -436,12 +436,6 @@
         ],
         "Just-Sim": [
             {
-                "rscdel": "Deleted patreon lock on races and headshots."
-            },
-            {
-                "rscadd": "Headshot Miniature on Examine"
-            },
-            {
                 "rscadd": "A headshot miniature, if you possess one."
             }
         ],
@@ -456,11 +450,6 @@
         "DrSirKnight": [
             {
                 "rscadd": "Two new wretch subclasses, Rouschild and Rejected Royal"
-            }
-        ],
-        "Just-Sim": [
-            {
-                "rscadd": "A headshot miniature, if you possess one."
             }
         ],
         "dwasint": [
@@ -482,6 +471,18 @@
             },
             {
                 "sound": "added heavy footstep sound"
+            }
+        ]
+    },
+    "2025-09-16": {
+        "grungussuss": [
+            {
+                "bugfix": "fixed runechat being cancelled on minor damage"
+            }
+        ],
+        "Just-Sim": [
+            {
+                "bugfix": "emotes not appearing to other people"
             }
         ]
     }
