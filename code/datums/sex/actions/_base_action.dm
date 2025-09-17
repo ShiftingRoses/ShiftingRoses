@@ -306,3 +306,15 @@
 			continue
 		return TRUE
 	return FALSE
+
+
+/datum/sex_action/proc/do_onomatopoeia(mob/living/carbon/human/user)
+	user.balloon_alert_to_viewers("Plap!", alpha = rand(100, 200), x_offset = rand(-15, 15), y_offset = rand(0, 25), size = 0.8)
+
+/datum/sex_action/proc/show_sex_effects(mob/living/carbon/human/user)
+	for(var/i in 1 to rand(1, 3))
+		if(!user.cmode) // Combat mode
+			new /obj/effect/temp_visual/heart/sex_effects(get_turf(user))
+		else
+			new /obj/effect/temp_visual/heart/sex_effects/red_heart(get_turf(user))
+

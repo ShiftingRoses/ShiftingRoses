@@ -141,6 +141,9 @@
 
 		action.on_perform(user, target)
 
+		if(user.has_kink(KINK_VISUAL_EFFECTS)) //Hearts played on action that can be turned off at will
+			action.show_sex_effects(user)
+
 		if(action.is_finished(user, target))
 			break
 		if(!action.continous)
@@ -309,6 +312,13 @@
 			return "<span class='love_high'>[string]</span>"
 		if(SEX_FORCE_EXTREME)
 			return "<span class='love_extreme'>[string]</span>"
+
+/datum/sex_session/proc/get_force_sound()
+	switch(force)
+		if(SEX_FORCE_LOW, SEX_FORCE_MID)
+			return pick(SEX_SOUNDS_SLOW)
+		if(SEX_FORCE_HIGH, SEX_FORCE_EXTREME)
+			return pick(SEX_SOUNDS_HARD)
 
 /datum/sex_session/proc/show_ui(selected_tab = "interactions")
 	var/list/dat = list()
@@ -1138,3 +1148,6 @@
 	)
 
 	return SM.set_data(save_name, "partner_notes", all_notes)
+
+
+

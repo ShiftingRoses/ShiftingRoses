@@ -227,3 +227,12 @@
 		if(!M.has_erp_pref(pref_type))
 			return FALSE
 	return TRUE
+
+/mob/living/proc/has_kink(kink_name)
+	if(!client?.prefs?.erp_preferences)
+		return FALSE
+	var/list/kink_prefs = client.prefs.erp_preferences["kinks"]
+	if(!kink_prefs || !kink_prefs[kink_name])
+		return FALSE
+	return kink_prefs[kink_name]["enabled"]
+
