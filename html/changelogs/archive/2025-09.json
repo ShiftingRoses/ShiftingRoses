@@ -485,5 +485,15 @@
                 "bugfix": "emotes not appearing to other people"
             }
         ]
+    },
+    "2025-09-18": {
+        "Just-Sim": [
+            {
+                "rscadd": "Sex VFX"
+            },
+            {
+                "rscadd": "Sex SFX"
+            }
+        ]
     }
 }
