@@ -346,7 +346,7 @@
 	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(on_say))
 
 	if(owner.mind)
-		owner.add_stress(/datum/stressevent/majesty_compelled)
+		owner.add_stress(/datum/stress_event/majesty_compelled)
 
 /datum/status_effect/majesty_compulsion/on_remove()
 	. = ..()
@@ -357,7 +357,7 @@
 	))
 
 	if(owner.mind)
-		owner.remove_stress(/datum/stressevent/majesty_compelled)
+		owner.remove_stress(/datum/stress_event/majesty_compelled)
 
 /datum/status_effect/majesty_compulsion/proc/on_pre_attack(obj/item/source, atom/target, mob/user, params)
 	SIGNAL_HANDLER
@@ -394,6 +394,6 @@
 	desc = "You are compelled by an overwhelming presence. You find it nearly impossible to act against them."
 	icon_state = "debuff"
 
-/datum/stressevent/majesty_compelled
+/datum/stress_event/majesty_compelled
 	desc = "There's someone here with such an overwhelming presence that I can barely think straight around them."
-	stressadd = -3
+	stress_change = -3

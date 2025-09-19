@@ -211,14 +211,14 @@ GLOBAL_LIST_INIT(character_flaws, list(
 			break
 	var/mob/living/carbon/P = user
 	if(cnt > 2)
-		P.add_stress(/datum/stressevent/paracrowd)
+		P.add_stress(/datum/stress_event/paracrowd)
 	cnt = 0
 	for(var/obj/effect/decal/cleanable/blood/B in view(7, user))
 		cnt++
 		if(cnt > 3)
 			break
 	if(cnt > 6)
-		P.add_stress(/datum/stressevent/parablood)
+		P.add_stress(/datum/stress_event/parablood)
 
 /datum/charflaw/isolationist
 	name = "Isolationist"
@@ -244,7 +244,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 			break
 	var/mob/living/carbon/P = user
 	if(cnt > 2)
-		P.add_stress(/datum/stressevent/crowd)
+		P.add_stress(/datum/stress_event/crowd)
 
 /datum/charflaw/clingy
 	name = "Clingy"
@@ -270,7 +270,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 			break
 	var/mob/living/carbon/P = user
 	if(cnt < 2)
-		P.add_stress(/datum/stressevent/nopeople)
+		P.add_stress(/datum/stress_event/nopeople)
 
 /datum/charflaw/noeyer
 	name = "Cyclops (R)"
@@ -404,15 +404,15 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	var/do_update_msg = TRUE
 	if(new_mammon_amount >= required_mammons)
 		// Feel better
-		if(user.has_stress_type(/datum/stressevent/vice))
+		if(user.has_stress_type(/datum/stress_event/vice))
 			to_chat(user, span_blue("[new_mammon_amount] mammons... That's more like it.."))
-		user.remove_stress(/datum/stressevent/vice)
+		user.remove_stress(/datum/stress_event/vice)
 		user.remove_status_effect(/datum/status_effect/debuff/addiction)
 		last_passed_check = world.time
 		do_update_msg = FALSE
 	else
 		// Feel bad
-		user.add_stress(/datum/stressevent/vice)
+		user.add_stress(/datum/stress_event/vice)
 		user.apply_status_effect(/datum/status_effect/debuff/addiction)
 
 	if(new_mammon_amount == last_checked_mammons)
@@ -502,7 +502,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	if(next_paincrave > world.time)
 		last_pain_threshold = NONE
 		return
-	user.add_stress(/datum/stressevent/vice)
+	user.add_stress(/datum/stress_event/vice)
 	user.apply_status_effect(/datum/status_effect/debuff/addiction)
 	var/current_pain = user.get_complex_pain()
 	// Bloodloss makes the pain count as extra large to allow people to bloodlet themselves with cutting weapons to satisfy vice
@@ -527,7 +527,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	if(new_pain_threshold == MASO_THRESHOLD_FOUR)
 		to_chat(user, span_blue("<b>That's more like it...</b>"))
 		next_paincrave = world.time + rand(35 MINUTES, 45 MINUTES)
-		user.remove_stress(/datum/stressevent/vice)
+		user.remove_stress(/datum/stress_event/vice)
 		user.remove_status_effect(/datum/status_effect/debuff/addiction)
 
 

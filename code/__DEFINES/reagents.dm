@@ -1,3 +1,9 @@
+#define LIQUID_UNIT_NAME_SINGULAR "ligula"
+#define LIQUID_UNIT_NAME_PLURAL "ligulae"
+
+/// Format amount and ligula or ligulae correctly based on volume "30 ligulae"
+#define UNIT_FORM_STRING(amount) ("[amount] [amount == 1 ? LIQUID_UNIT_NAME_SINGULAR : LIQUID_UNIT_NAME_PLURAL]")
+
 #define SOLID 			1
 #define LIQUID			2
 #define GAS				3

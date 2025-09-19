@@ -28,7 +28,7 @@
 		if(!is_ascendant(ASTRATA) && (!(human_mob.mind?.assigned_role.title in GLOB.church_positions) && !human_mob.is_noble()))
 			continue
 
-		human_mob.add_stress(/datum/stressevent/astrata_grandeur)
+		human_mob.add_stress(/datum/stress_event/astrata_grandeur)
 
 		to_chat(human_mob, span_notice("Astrata shines brightly todae - and just as she leads the Ten, so must you guide others with a firm hand. The Sun Queen demands no less from those who bask in her glory."))
 		human_mob.playsound_local(human_mob, 'sound/magic/bless.ogg', 100)

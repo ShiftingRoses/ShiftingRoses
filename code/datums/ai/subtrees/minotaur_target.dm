@@ -28,7 +28,6 @@
 				boss.playsound_local(get_turf(boss), 'sound/misc/explode/explosionfar (1).ogg', 50, TRUE)
 				new /obj/effect/temp_visual/minotaur_rage(get_turf(boss))
 				controller.set_blackboard_key(BB_MINOTAUR_ENRAGE_BONUS, 15)
-				boss.add_atom_colour(rgb(255, 0, 0, 50), TEMPORARY_COLOUR_PRIORITY)
 			else if(boss.health < boss.maxHealth * 0.6 && controller.blackboard[BB_MINOTAUR_PHASE] < 2)
 				controller.set_blackboard_key(BB_MINOTAUR_PHASE, 2)
 				boss.visible_message("<span class='warning'>[boss] stomps the ground in anger, its eyes burning with hatred!</span>")

@@ -9,10 +9,10 @@
 /datum/reagent/miasmagas/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M, TRAIT_NOSTINK))
 		if(M.has_flaw(/datum/charflaw/addiction/maniac))
-			M.add_stress(/datum/stressevent/miasmagasmaniac)
+			M.add_stress(/datum/stress_event/miasmagasmaniac)
 		else
 			M.add_nausea(3)
-			M.add_stress(/datum/stressevent/miasmagas)
+			M.add_stress(/datum/stress_event/miasmagas)
 	return ..()
 
 /datum/reagent/rogueacid

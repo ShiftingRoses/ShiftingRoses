@@ -14,7 +14,7 @@
 			return TRUE
 	if(!has_language(language))
 		if(has_flaw(/datum/charflaw/paranoid))
-			V.add_stress(/datum/stressevent/paratalk)
+			V.add_stress(/datum/stress_event/paratalk)
 
 /mob/living/carbon/human/canBeHandcuffed()
 	if(num_hands < 2)

@@ -168,7 +168,7 @@ w/**
 	. = ..()
 
 	if((direct & (direct - 1)) && mob.loc == n) //moved diagonally successfully
-		add_delay *= 2
+		add_delay *= sqrt(2)
 
 	var/after_glide = 0
 	if(visual_delay)

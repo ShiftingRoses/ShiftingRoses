@@ -53,8 +53,8 @@
 
 /datum/component/item_equipped_movement_rustle/proc/try_step(mob/source)
 	SIGNAL_HANDLER
-	// if (source.moving_diagonally == FIRST_DIAG_STEP)
-	// 	return
+	if (source.moving_diagonally == FIRST_DIAG_STEP)
+		return
 	move_counter++
 	if(move_counter >= move_delay)
 		play_rustle_sound(source)

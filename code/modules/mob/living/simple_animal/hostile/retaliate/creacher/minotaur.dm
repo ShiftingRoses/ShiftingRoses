@@ -37,7 +37,7 @@
 	retreat_health = 0
 
 	attack_sound = list('sound/combat/wooshes/blunt/wooshhuge (1).ogg','sound/combat/wooshes/blunt/wooshhuge (2).ogg','sound/combat/wooshes/blunt/wooshhuge (3).ogg')
-	dodgetime = 0
+	dodgetime = 50
 	aggressive = 1
 //	stat_attack = UNCONSCIOUS
 	remains_type = /obj/item/weapon/axe/battle

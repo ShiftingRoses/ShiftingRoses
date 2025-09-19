@@ -1,37 +1,37 @@
 
-/datum/stressevent/cumok
+/datum/stress_event/cumok
 	timer = 10 MINUTES
-	stressadd = -2
+	stress_change = -2
 	desc = "<span class='green'>I came.</span>"
 
-/datum/stressevent/cummid
+/datum/stress_event/cummid
 	timer = 10 MINUTES
-	stressadd = -2
+	stress_change = -2
 	desc = "<span class='green'>I came, and it was great.</span>"
 
-/datum/stressevent/cumgood
+/datum/stress_event/cumgood
 	timer = 10 MINUTES
-	stressadd = -3
+	stress_change = -3
 	desc = "<span class='green'>I came, and it was wonderful.</span>"
 
-/datum/stressevent/cummax
+/datum/stress_event/cummax
 	timer = 10 MINUTES
-	stressadd = -4
+	stress_change = -4
 	desc = "<span class='green'>I came, and it was incredible.</span>"
 
-/datum/stressevent/cumlove
+/datum/stress_event/cumlove
 	timer = 20 MINUTES
-	stressadd = -5
+	stress_change = -5
 	desc = "<span class='green'>I made love.</span>"
 
-/datum/stressevent/cumpaingood
+/datum/stress_event/cumpaingood
 	timer = 10 MINUTES
-	stressadd = -5
+	stress_change = -5
 	desc = "<span class='green'>Pain makes it better.</span>"
 
-/datum/stressevent/public_thrill
+/datum/stress_event/public_thrill
 	timer = 1 MINUTES
-	stressadd = -2
+	stress_change = -2
 	desc = "<span class='green'>I was caught.</span>"
 
 /datum/status_effect/knot_tied

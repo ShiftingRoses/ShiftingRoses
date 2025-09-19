@@ -588,7 +588,7 @@
 		return
 	if(ishuman(target))
 		var/mob/living/carbon/H = target
-		H.add_stress(/datum/stressevent/hug)
+		H.add_stress(/datum/stress_event/hug)
 		playsound(target.loc, pick('sound/vo/hug.ogg'), 100, FALSE, -1)
 
 		if(user.mind)

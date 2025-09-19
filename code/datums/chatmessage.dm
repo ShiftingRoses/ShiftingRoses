@@ -113,6 +113,11 @@
 
 /datum/chatmessage/proc/on_parent_take_damage(datum/source, damage, damagetype, def_zone)
 	SIGNAL_HANDLER
+	if(QDELETED(source))
+		return
+
+	if(damage < 4)
+		return
 
 	if(damage < 4)
 		return
@@ -370,9 +375,9 @@
 		var/old_pixel_z = message_loc.pixel_z
 		animate(
 			message_loc,
-			time = CHAT_SPELLING_DELAY_WITH_EXCLAIMED_MULTIPLIER + 0.1,
-			pixel_w = ((exclaimed_multiplier - 1) + rand(0, exclaimed_multiplier)) * pick(-1, 1),
-			pixel_z = (exclaimed_multiplier + rand((exclaimed_multiplier - 1) * direction, 1 * (direction ? direction : 1) * exclaimed_multiplier)),
+			time = CHAT_SPELLING_DELAY_WITH_EXCLAIMED_MULTIPLIER + 0.3 - (exclaimed ? 0 : 0.1),
+			pixel_w = ((exclaimed_multiplier - 1) + rand(exclaimed_multiplier - 1, exclaimed_multiplier + (exclaimed ? 0 : 3))) * pick(-1, 1),
+			pixel_z = (exclaimed_multiplier + rand((exclaimed_multiplier - 1 + (exclaimed ? 0 : 3)) * direction, 1 * (direction ? direction : 1) * exclaimed_multiplier)),
 			transform = message_loc.transform.Turn(rand(2 * exclaimed_multiplier, 6 * (exclaimed_multiplier - 0.5) * direction)),
 			easing = ELASTIC_EASING,
 		)
@@ -385,6 +390,9 @@
 
 /datum/chatmessage/proc/premature_end_of_life()
 	SIGNAL_HANDLER
+	if(QDELETED(message))
+		return
+
 	premature_end = TRUE
 	_add_string(pick(CHAT_GLORF_LIST))
 	var/delay = rand(10, 20) * 0.01 SECONDS // yes, I'm dividing by 100 and then using the SECONDS define which multiplies by 10, deal with it. ^_^

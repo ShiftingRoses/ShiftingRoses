@@ -92,6 +92,9 @@
 	if (forced || HAS_TRAIT(source, TRAIT_SILENT_FOOTSTEPS))
 		return
 
+	if(source.moving_diagonally == 1)
+		return
+
 	var/list/prepared_steps = prepare_step(source)
 	if(!prepared_steps)
 		return
@@ -108,6 +111,9 @@
 /datum/element/footstep/proc/play_humanstep(mob/living/carbon/human/source, atom/oldloc, direction, forced)
 	SIGNAL_HANDLER
 	if (forced || HAS_TRAIT(source, TRAIT_SILENT_FOOTSTEPS))
+		return
+
+	if(source.moving_diagonally == 1)
 		return
 
 	var/volume_multiplier = 1

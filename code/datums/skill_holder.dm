@@ -292,7 +292,7 @@
 				multiplier += 0.25 //this means a base 35% of your xp is also given to nearby apprentices plus skill modifiers.
 			var/apprentice_amt = amt * 0.1 + multiplier
 			if(apprentice.adjust_experience(skill, apprentice_amt, FALSE, FALSE))
-				current.add_stress(/datum/stressevent/apprentice_making_me_proud)
+				current.add_stress(/datum/stress_event/apprentice_making_me_proud)
 
 	var/is_new_skill = !(skill_ref in known_skills)
 	if(isnull(old_level) && !is_new_skill)
@@ -483,4 +483,4 @@
 					multiplier += 0.15
 			var/apprentice_amt = amt * 0.1 + multiplier
 			if(apprentice.mind.add_sleep_experience(skill, apprentice_amt, FALSE, FALSE))
-				current.add_stress(/datum/stressevent/apprentice_making_me_proud)
+				current.add_stress(/datum/stress_event/apprentice_making_me_proud)

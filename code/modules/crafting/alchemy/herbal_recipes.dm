@@ -242,7 +242,7 @@
 
 /datum/reagent/medicine/herbal/valeriana_draught/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "valeriana_calm", /datum/mood_event/herbal_calm)
+	M.add_stress(/datum/stress_event/herbal_calm)
 
 /datum/reagent/medicine/herbal/valeriana_draught/on_mob_life(mob/living/carbon/M)
 	if(M.drowsyness < sleep_power)
@@ -267,7 +267,7 @@
 
 /datum/reagent/buff/herbal/benedictus_vigor/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "vigor_boost", /datum/mood_event/herbal_vigor)
+	M.add_stress(/datum/stress_event/herbal_vigor)
 
 /datum/reagent/buff/herbal/benedictus_vigor/on_mob_life(mob/living/carbon/M)
 	M.adjust_stamina(3)
@@ -323,7 +323,7 @@
 
 /datum/reagent/medicine/herbal/herbalist_panacea/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "panacea_wellness", /datum/mood_event/herbal_wellness)
+	M.add_stress(/datum/stress_event/herbal_wellness)
 
 /datum/reagent/medicine/herbal/herbalist_panacea/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-1.5)
@@ -367,7 +367,7 @@
 
 /datum/reagent/buff/herbal/scholar_focus/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "mental_focus", /datum/mood_event/herbal_focus)
+	M.add_stress(/datum/stress_event/herbal_focus)
 
 /datum/reagent/buff/herbal/scholar_focus/on_mob_life(mob/living/carbon/M)
 	if(M.drowsyness > 0)
@@ -389,7 +389,7 @@
 
 /datum/reagent/consumable/herbal/rosa_oil/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "pleasant_scent", /datum/mood_event/pleasant_scent)
+	M.add_stress(/datum/stress_event/pleasant_scent)
 
 
 /datum/reagent/medicine/herbal/mentha_oil
@@ -475,7 +475,7 @@
 
 /datum/reagent/buff/herbal/moonwater_elixir/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "mystical_clarity", /datum/mood_event/mystical_boost)
+	M.add_stress(/datum/stress_event/mystical_boost)
 
 
 // Combat Enhancement
@@ -491,7 +491,7 @@
 
 /datum/reagent/buff/herbal/battle_stim/on_mob_metabolize(mob/living/M)
 	. = ..()
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "battle_ready", /datum/mood_event/battle_stim)
+	M.add_stress(/datum/stress_event/battle_stim)
 
 /datum/reagent/buff/herbal/battle_stim/on_mob_life(mob/living/carbon/M)
 	M.adjust_stamina(2)
@@ -541,37 +541,37 @@
 
 // Mood Events for Herbal Effects
 
-/datum/mood_event/herbal_calm
-	description = "I feel deeply relaxed and at peace."
-	mood_change = 3
-	timeout = 10 MINUTES
+/datum/stress_event/herbal_calm
+	desc = "I feel deeply relaxed and at peace."
+	stress_change = 3
+	timer = 10 MINUTES
 
-/datum/mood_event/herbal_vigor
-	description = "I feel energized and vigorous!"
-	mood_change = 2
-	timeout = 15 MINUTES
+/datum/stress_event/herbal_vigor
+	desc = "I feel energized and vigorous!"
+	stress_change = 2
+	timer = 15 MINUTES
 
-/datum/mood_event/herbal_wellness
-	description = "I feel wonderfully healthy and restored."
-	mood_change = 4
-	timeout = 20 MINUTES
+/datum/stress_event/herbal_wellness
+	desc = "I feel wonderfully healthy and restored."
+	stress_change = 4
+	timer = 20 MINUTES
 
-/datum/mood_event/herbal_focus
-	description = "My mind is sharp and focused."
-	mood_change = 2
-	timeout = 12 MINUTES
+/datum/stress_event/herbal_focus
+	desc = "My mind is sharp and focused."
+	stress_change = 2
+	timer = 12 MINUTES
 
-/datum/mood_event/pleasant_scent
-	description = "I smell wonderful!"
-	mood_change = 1
-	timeout = 30 MINUTES
+/datum/stress_event/pleasant_scent
+	desc = "I smell wonderful!"
+	stress_change = 1
+	timer = 30 MINUTES
 
-/datum/mood_event/mystical_boost
-	description = "I feel in tune with mystical forces."
-	mood_change = 3
-	timeout = 15 MINUTES
+/datum/stress_event/mystical_boost
+	desc = "I feel in tune with mystical forces."
+	stress_change = 3
+	timer = 15 MINUTES
 
-/datum/mood_event/battle_stim
-	description = "I feel ready for battle!"
-	mood_change = 2
-	timeout = 10 MINUTES
+/datum/stress_event/battle_stim
+	desc = "I feel ready for battle!"
+	stress_change = 2
+	timer = 10 MINUTES

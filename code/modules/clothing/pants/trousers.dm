@@ -38,6 +38,17 @@
 /obj/item/clothing/pants/trou/leather/advanced/colored
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
+/obj/item/clothing/pants/trou/leather/quiltedkilt //close enough!
+	name = "quilted kilt"
+	desc = "A sturdy quilted kilt, commonly worn by Lakkarian soldiers or worn casually by Lakkarian commoners."
+	icon_state = "lakkarikilt"
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	sewrepair = TRUE
+	max_integrity = 175
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP)
+	armor = list("blunt" = 65, "slash" = 50, "stab" = 25, "piercing" = 25,"fire" = 0, "acid" = 0)
+
 /obj/item/clothing/pants/trou/leather/masterwork
 	name = "masterwork leather chausses"
 	desc = "These chausses are a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
@@ -97,3 +108,4 @@
 	armor = ARMOR_PADDED
 	prevent_crits = MINOR_CRITICALS
 	max_integrity = INTEGRITY_STANDARD
+

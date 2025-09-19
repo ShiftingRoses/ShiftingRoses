@@ -21,6 +21,9 @@
 	name = "Reading"
 	desc = "Reading is a skill that represents your character's ability to read and write. The higher your skill in Reading, better you can read." //Placeholder description, no clue what it does besides minimum reading for signs
 	randomable_dream_xp = FALSE
+	dreams = list(
+		"...you lick your fingers, gently flipping through the old, decaying pages... re-reading the page, your eyes widen in shock... the truth is terrible... you feel a presence behind you... and the cold blade in your throat..."
+	)//reading isnt dreamable, but just in case
 
 /datum/skill/misc/swimming
 	name = "Swimming"
@@ -53,6 +56,9 @@
 /datum/skill/misc/riding
 	name = "Riding"
 	desc = "Riding is a skill that represents your character's ability to ride animals. The higher your skill in Riding, the less likely you are to be thrown off your mount."
+	dreams = list(
+		"...you feel the wind in your face and mane... you hold onto your stead for dear life... the hooves strike against the ground... your lungs breathe for the first time... freedom..."
+	)
 
 /datum/skill/misc/music
 	name = "Music"

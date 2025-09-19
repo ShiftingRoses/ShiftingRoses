@@ -157,7 +157,7 @@
 
 			// The crowd is pleased
 			for(var/mob/M in viewers(src, 7))
-				M.add_stress(/datum/stressevent/viewexecution)
+				M.add_stress(/datum/stress_event/viewexecution)
 				addtimer(CALLBACK(M, TYPE_PROC_REF(/mob, emote), "clap"), delay_offset * 0.3)
 				delay_offset++
 		else
@@ -165,10 +165,10 @@
 			log_combat(user, H, "dropped the blade on", src, " non-fatally")
 			H.emote("scream")
 			// Executor has failed and was ashamed
-			user.add_stress(/datum/stressevent/guillotineexecutorfail)
+			user.add_stress(/datum/stress_event/guillotineexecutorfail)
 			// The crowd is unpleased
 			for(var/mob/M in viewers(src, 7))
-				M.add_stress(/datum/stressevent/guillotinefail)
+				M.add_stress(/datum/stress_event/guillotinefail)
 				addtimer(CALLBACK(M, TYPE_PROC_REF(/mob, emote), "huh"), delay_offset * 0.3)
 				delay_offset++
 

@@ -121,9 +121,9 @@
 
 /mob/living/carbon/human/handle_traits()
 	if (getOrganLoss(ORGAN_SLOT_BRAIN) >= 60)
-		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "brain_damage", /datum/mood_event/brain_damage)
+		add_stress(/datum/stress_event/brain_damage)
 	else
-		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "brain_damage")
+		remove_stress(/datum/stress_event/brain_damage)
 	return ..()
 
 /mob/living/proc/handle_environment()
@@ -192,7 +192,7 @@
 	if(locations & HEAD)
 		if(!coverhead)
 			var/mob/living/carbon/V = src
-			V.add_stress(/datum/stressevent/coldhead)
+			V.add_stress(/datum/stress_event/coldhead)
 //END FIRE CODE
 
 

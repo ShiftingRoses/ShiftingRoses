@@ -68,8 +68,8 @@
 		var/mob/living/carbon/human/male = pair[1]
 		var/mob/living/carbon/human/female = pair[2]
 
-		male.add_stress(/datum/stressevent/eora_matchmaking)
-		female.add_stress(/datum/stressevent/eora_matchmaking)
+		male.add_stress(/datum/stress_event/eora_matchmaking)
+		female.add_stress(/datum/stress_event/eora_matchmaking)
 
 		to_chat(male, span_rose("Eora's voice whispers in your heart - you feel an irresistible urge to finally get married..."))
 		to_chat(male, span_rose("You can choose anyone you fancy to fulfill this desire, but the name of [span_notice("[female.real_name]")], the [female.job] seems to get your heart racing for some reason..."))

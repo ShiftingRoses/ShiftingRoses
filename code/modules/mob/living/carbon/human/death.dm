@@ -106,10 +106,10 @@
 							if(HU.dna.species.id == dna.species.id)
 								var/mob/living/carbon/D = HU
 								if(D.has_flaw(/datum/charflaw/addiction/maniac))
-									D.add_stress(/datum/stressevent/viewdeathmaniac)
+									D.add_stress(/datum/stress_event/viewdeathmaniac)
 									D.sate_addiction()
 								else
-									D.add_stress(/datum/stressevent/viewdeath)
+									D.add_stress(/datum/stress_event/viewdeath)
 
 	dna.species.spec_death(gibbed, src) // parent call deletes dna
 
@@ -148,10 +148,10 @@
 				CA.adjust_triumphs(-1)
 			var/mob/living/carbon/V = CA
 			if(V.has_flaw(/datum/charflaw/addiction/maniac))
-				V.add_stress(/datum/stressevent/viewgibmaniac)
+				V.add_stress(/datum/stress_event/viewgibmaniac)
 				V.sate_addiction()
 				continue
-			V.add_stress(/datum/stressevent/viewgib)
+			V.add_stress(/datum/stress_event/viewgib)
 	. = ..()
 
 /mob/living/carbon/human/revive(full_heal, admin_revive)

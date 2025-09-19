@@ -79,7 +79,7 @@
 
 /datum/status_effect/demonic_torment/on_apply()
 	. = ..()
-	owner.add_stress(/datum/stressevent/infernal_pain)
+	owner.add_stress(/datum/stress_event/infernal_pain)
 
 /datum/status_effect/demonic_torment/tick()
 	if(world.time > next_torment && prob(5))
@@ -89,7 +89,7 @@
 			if(1)
 				owner.apply_damage(rand(2, 5), BURN, null, 0, null, FALSE)
 				to_chat(owner, span_userdanger("Infernal flames sear your cursed flesh!"))
-				owner.add_stress(/datum/stressevent/infernal_pain)
+				owner.add_stress(/datum/stress_event/infernal_pain)
 			if(2)
 				owner.emote("scream", forced = TRUE)
 				to_chat(owner, span_userdanger("The family curse torments you!"))
@@ -123,7 +123,7 @@
 			"Death would be a mercy from this curse."
 		)
 		owner.say(pick(despair_messages), forced = "family curse")
-		owner.add_stress(/datum/stressevent/cursed_despair)
+		owner.add_stress(/datum/stress_event/cursed_despair)
 
 /datum/status_effect/demonic_wrath
 	id = "demonic_wrath"
@@ -159,7 +159,7 @@
 		if(!found_target && prob(40))
 			owner.apply_damage(rand(3, 6), BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
 			to_chat(owner, span_userdanger("In my cursed rage, I hurt myself!"))
-			owner.add_stress(/datum/stressevent/cursed_wrath)
+			owner.add_stress(/datum/stress_event/cursed_wrath)
 
 /datum/status_effect/demonic_paranoia
 	id = "demonic_paranoia"
@@ -188,7 +188,7 @@
 			"They plot against our cursed kind."
 		)
 		owner.say(pick(paranoid_messages), forced = "family curse")
-		owner.add_stress(/datum/stressevent/cursed_paranoia)
+		owner.add_stress(/datum/stress_event/cursed_paranoia)
 
 /datum/status_effect/demonic_damnation
 	id = "demonic_damnation"
@@ -206,7 +206,7 @@
 /datum/status_effect/demonic_damnation/tick()
 	if(prob(2))
 		to_chat(owner, span_userdanger("You feel the weight of your family's damnation!"))
-		owner.add_stress(/datum/stressevent/cursed_damnation)
+		owner.add_stress(/datum/stress_event/cursed_damnation)
 
 /datum/status_effect/demonic_gluttony
 	id = "demonic_gluttony"
@@ -231,7 +231,7 @@
 				target_food.attack(owner, owner)
 		else
 			to_chat(owner, span_userdanger("I hunger for anything to satisfy this cursed bloodline!"))
-			owner.add_stress(/datum/stressevent/cursed_hunger)
+			owner.add_stress(/datum/stress_event/cursed_hunger)
 
 /datum/status_effect/demonic_pride
 	id = "demonic_pride"
@@ -296,7 +296,7 @@
 			)
 			owner.say(pick(lonely_messages), forced = "family curse")
 			if(!found_people)
-				owner.add_stress(/datum/stressevent/cursed_isolation)
+				owner.add_stress(/datum/stress_event/cursed_isolation)
 
 /datum/status_effect/demonic_madness
 	id = "demonic_madness"
@@ -421,37 +421,37 @@
 /// STRESS EVENTS ///
 //////////////////////
 
-/datum/stressevent/infernal_pain
+/datum/stress_event/infernal_pain
 	timer = 30 SECONDS
-	stressadd = 3
+	stress_change = 3
 	desc = "Infernal flames burn my cursed flesh!"
 
-/datum/stressevent/cursed_despair
+/datum/stress_event/cursed_despair
 	timer = 60 SECONDS
-	stressadd = 4
+	stress_change = 4
 	desc = "The family curse fills me with hopelessness."
 
-/datum/stressevent/cursed_wrath
+/datum/stress_event/cursed_wrath
 	timer = 45 SECONDS
-	stressadd = 2
+	stress_change = 2
 	desc = "My cursed rage turned inward."
 
-/datum/stressevent/cursed_paranoia
+/datum/stress_event/cursed_paranoia
 	timer = 90 SECONDS
-	stressadd = 3
+	stress_change = 3
 	desc = "Everyone knows about our cursed bloodline."
 
-/datum/stressevent/cursed_damnation
+/datum/stress_event/cursed_damnation
 	timer = 120 SECONDS
-	stressadd = 5
+	stress_change = 5
 	desc = "I feel the weight of my family's damnation."
 
-/datum/stressevent/cursed_hunger
+/datum/stress_event/cursed_hunger
 	timer = 60 SECONDS
-	stressadd = 2
+	stress_change = 2
 	desc = "The curse compels me to consume, but I cannot!"
 
-/datum/stressevent/cursed_isolation
+/datum/stress_event/cursed_isolation
 	timer = 90 SECONDS
-	stressadd = 4
+	stress_change = 4
 	desc = "Our cursed heritage leaves us utterly alone."

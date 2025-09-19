@@ -1,7 +1,7 @@
 /datum/element/divine_intervention
 	element_flags = ELEMENT_BESPOKE
 	id_arg_index = 2
-	var/datum/stressevent/stress_event
+	var/datum/stress_event/stress_event
 	var/datum/patron/patron
 	var/allows_pantheon
 	var/sets_alight
@@ -39,7 +39,7 @@
 
 	if(stress_event && punishment >= PUNISHMENT_STRESS)
 		to_chat(mob, span_warning("I feel the eyes of [patron.name] upon me..."))
-		mob.add_stress(/datum/stressevent/divine_punishment)
+		mob.add_stress(/datum/stress_event/divine_punishment)
 
 	if(sets_alight && punishment >= PUNISHMENT_BURN)
 		to_chat(mob, span_warning("[patron.name] spurns me for touching their sacred item, \the [source]!"))

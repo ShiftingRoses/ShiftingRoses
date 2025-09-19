@@ -1084,7 +1084,7 @@
 			  "}
 		for(var/atom/path as anything in reagent_requirements)
 			var/count = reagent_requirements[path]
-			html += "[CEILING(count / 3, 1)] oz of [initial(path.name)]<br>"
+			html += "[UNIT_FORM_STRING(count)] of [initial(path.name)]<br>"
 		html += {"
 			</div>
 		<div>

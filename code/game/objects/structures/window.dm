@@ -192,7 +192,7 @@
 					head.receive_damage(20)
 				dude.Stun(5 SECONDS)
 				dude.Knockdown(5 SECONDS)
-				dude.add_stress(/datum/stressevent/hithead)
+				dude.add_stress(/datum/stress_event/hithead)
 				dude.visible_message(
 					span_warning("[dude] hits their head as they fly through the window!"),
 					span_danger("I hit my head on the window frame!"),

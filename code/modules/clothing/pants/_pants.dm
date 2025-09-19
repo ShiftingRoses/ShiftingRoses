@@ -44,7 +44,6 @@
 	var/obj/item/clothing/accessory/attached_accessory
 	var/mutable_appearance/accessory_overlay
 	var/mutantrace_variation = NO_MUTANTRACE_VARIATION //Are there special sprites for specific situations? Don't use this unless you need to.
-	var/freshly_laundered = FALSE
 	abstract_type = /obj/item/clothing/pants
 
 /obj/item/clothing/pants/worn_overlays(mutable_appearance/standing, isinhands = FALSE, icon_file, dummy_block = FALSE)
@@ -71,10 +70,6 @@
 		fitted = initial(fitted)
 		if(!alt_covers_chest)
 			body_parts_covered |= CHEST
-
-	if((slot & ITEM_SLOT_PANTS) && freshly_laundered)
-		freshly_laundered = FALSE
-		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "fresh_laundry", /datum/mood_event/fresh_laundry)
 
 	if(attached_accessory && !(slot & ITEM_SLOT_HANDS) && ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -175,8 +170,3 @@
 		if(!alt_covers_chest)
 			body_parts_covered |= CHEST
 	return adjusted
-
-/obj/item/clothing/pants/examine(mob/user)
-	. = ..()
-	if(freshly_laundered)
-		. += "It looks fresh and clean."

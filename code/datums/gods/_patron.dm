@@ -92,11 +92,11 @@ GLOBAL_LIST_EMPTY(prayers)
 	follower.adjust_divine_fire_stacks(100)
 	follower.IgniteMob()
 	record_round_statistic(STATS_PEOPLE_SMITTEN)
-	follower.add_stress(/datum/stressevent/psycurse)
+	follower.add_stress(/datum/stress_event/psycurse)
 
 /// The follower has prayed in a special way to the patron and is being rewarded.
 /datum/patron/proc/reward_prayer(mob/living/follower)
 	SHOULD_CALL_PARENT(TRUE)
 
 	follower.playsound_local(follower, 'sound/misc/notice (2).ogg', 100, FALSE)
-	follower.add_stress(/datum/stressevent/psyprayer)
+	follower.add_stress(/datum/stress_event/psyprayer)

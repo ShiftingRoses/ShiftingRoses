@@ -17,13 +17,13 @@
 						"<span class='notice'>I stop to take in [parent].</span>")
 	switch(impress)
 		if (0 to BAD_ART)
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "artbad", /datum/mood_event/artbad)
+			M.add_stress(/datum/stress_event/artbad)
 		if (BAD_ART to GOOD_ART)
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "artok", /datum/mood_event/artok)
+			M.add_stress(/datum/stress_event/artok)
 		if (GOOD_ART to GREAT_ART)
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "artgood", /datum/mood_event/artgood)
+			M.add_stress(/datum/stress_event/artgood)
 		if(GREAT_ART to INFINITY)
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "artgreat", /datum/mood_event/artgreat)
+			M.add_stress(/datum/stress_event/artgreat)
 
 
 /datum/component/art/proc/on_other_examine(datum/source, mob/M)
@@ -45,4 +45,4 @@
 	M.visible_message("<span class='notice'>[M] stops to inspect [parent].</span>", \
 						"<span class='notice'>I take in [parent], inspecting the fine craftsmanship of the proletariat.</span>")
 
-	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "artbad", /datum/mood_event/artbad)
+	M.add_stress(/datum/stress_event/artbad)

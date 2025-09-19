@@ -128,7 +128,7 @@
 
 /datum/component/rot/stinky_person
 	soundloop = null
-	var/static/list/clean_moodlets = list(/datum/stressevent/clean, /datum/stressevent/clean_plus)
+	var/static/list/clean_moodlets = list(/datum/stress_event/clean, /datum/stress_event/clean_plus)
 
 /datum/component/rot/stinky_person/process()
 	..()

@@ -13,7 +13,8 @@ GLOBAL_LIST_EMPTY(antagonists)
 	var/replace_banned = TRUE //Should replace jobbanned player with ghosts if granted.
 	var/list/objectives = list()
 	var/antag_memory = ""//These will be removed with antag datum
-	var/antag_moodlet //typepath of moodlet that the mob will gain with their status
+	/// Antag stress event
+	var/datum/stress_event/antag_stress
 	var/antag_hud_type
 	var/antag_hud_name
 	var/list/confess_lines
@@ -111,7 +112,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 			greet()
 		apply_innate_effects()
 		add_antag_hud(antag_hud_type, antag_hud_name)
-		give_antag_moodies()
+		give_antag_stress()
 		if(owner.current.has_flaw(/datum/charflaw/pacifist))
 			var/mob/living/carbon/human/human_user = owner.current
 			QDEL_NULL(human_user?.charflaw)
@@ -142,7 +143,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 
 /datum/antagonist/proc/on_removal()
 	remove_innate_effects()
-	clear_antag_moodies()
+	clear_antag_stress()
 	remove_antag_hud(antag_hud_type, antag_hud_name)
 	if(owner)
 		LAZYREMOVE(owner.antag_datums, src)
@@ -166,15 +167,15 @@ GLOBAL_LIST_EMPTY(antagonists)
 /datum/antagonist/proc/farewell()
 	return
 
-/datum/antagonist/proc/give_antag_moodies()
-	if(!antag_moodlet)
+/datum/antagonist/proc/give_antag_stress()
+	if(!antag_stress)
 		return
-	SEND_SIGNAL(owner.current, COMSIG_ADD_MOOD_EVENT, "antag_moodlet", antag_moodlet)
+	owner.current.add_stress(antag_stress)
 
-/datum/antagonist/proc/clear_antag_moodies()
-	if(!antag_moodlet)
+/datum/antagonist/proc/clear_antag_stress()
+	if(!antag_stress)
 		return
-	SEND_SIGNAL(owner.current, COMSIG_CLEAR_MOOD_EVENT, "antag_moodlet")
+	owner.current.remove_stress(antag_stress)
 
 //Returns the team antagonist belongs to if any.
 /datum/antagonist/proc/get_team()

@@ -92,7 +92,7 @@
 		var/obj/item/painting/lorehead/D = H
 		if(D.headprice > 0)
 			to_chat(user, span_danger("as the [src] consumes [D] without a trace, you are hit with a wistful feeling, your past...gone in an instant."))
-			user.add_stress(/datum/stressevent/destroyed_past)
+			user.add_stress(/datum/stress_event/destroyed_past)
 			budget2change(D.headprice, user)
 			qdel(D)
 			return

@@ -276,7 +276,8 @@
 	name = "spiked mace"
 	icon_state = "spikedmace"
 	max_integrity = 200
-
+	melting_material = /datum/material/iron
+	melt_amount = 150
 
 //................ Morningstar ............... //
 /obj/item/weapon/mace/steel/morningstar

@@ -59,15 +59,6 @@
 	flag = "magic"
 	hitsound = 'sound/blank.ogg'
 
-/obj/projectile/magic/firebolt/on_hit(target)
-	if(ismob(target))
-		var/mob/M = target
-		if(M.can_block_magic(MAGIC_RESISTANCE))
-			M.visible_message(span_warning("[src] vanishes on contact with [target]!"))
-			qdel(src)
-			return BULLET_ACT_BLOCK
-	. = ..()
-
 /mob/living/simple_animal/hostile/retaliate/infernal/imp/Initialize()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)

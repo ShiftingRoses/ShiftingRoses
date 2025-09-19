@@ -258,66 +258,66 @@ All foods are distributed among various categories. Use common sense.
 		if(human_eater.culinary_preferences)
 			var/favorite_food_type = human_eater.culinary_preferences[CULINARY_FAVOURITE_FOOD]
 			if(favorite_food_type == type)
-				if(human_eater.add_stress(/datum/stressevent/favourite_food))
+				if(human_eater.add_stress(/datum/stress_event/favourite_food))
 					to_chat(human_eater, span_green("Yum! My favorite food!"))
 			else if(ispath(type, favorite_food_type))
 				var/obj/item/reagent_containers/food/snacks/favorite_food_instance = favorite_food_type
 				var/favorite_food_name = initial(favorite_food_instance.name)
 				if(favorite_food_name == name)
-					if(human_eater.add_stress(/datum/stressevent/favourite_food))
+					if(human_eater.add_stress(/datum/stress_event/favourite_food))
 						to_chat(human_eater, span_green("Yum! My favorite food!"))
 			else
 				var/obj/item/reagent_containers/food/snacks/favorite_food_instance = favorite_food_type
 				var/slice_path = initial(favorite_food_instance.slice_path)
 				if(slice_path && type == slice_path)
-					if(human_eater.add_stress(/datum/stressevent/favourite_food))
+					if(human_eater.add_stress(/datum/stress_event/favourite_food))
 						to_chat(human_eater, span_green("Yum! My favorite food!"))
 
 			var/hated_food_type = human_eater.culinary_preferences[CULINARY_HATED_FOOD]
 			if(hated_food_type == type)
-				if(human_eater.add_stress(/datum/stressevent/hated_food))
+				if(human_eater.add_stress(/datum/stress_event/hated_food))
 					to_chat(human_eater, span_red("Yuck! My hated food!"))
 			else if(ispath(type, hated_food_type))
 				var/obj/item/reagent_containers/food/snacks/hated_food_instance = hated_food_type
 				var/hated_food_name = initial(hated_food_instance.name)
 				if(hated_food_name == name)
-					if(human_eater.add_stress(/datum/stressevent/hated_food))
+					if(human_eater.add_stress(/datum/stress_event/hated_food))
 						to_chat(human_eater, span_red("Yuck! My hated food!"))
 			else
 				var/obj/item/reagent_containers/food/snacks/hated_food_instance = hated_food_type
 				var/slice_path = initial(hated_food_instance.slice_path)
 				if(slice_path && type == slice_path)
-					if(human_eater.add_stress(/datum/stressevent/hated_food))
+					if(human_eater.add_stress(/datum/stress_event/hated_food))
 						to_chat(human_eater, span_red("Yuck! My hated food!"))
 
 		if (!HAS_TRAIT(human_eater, TRAIT_NASTY_EATER))
 			if (human_eater.is_noble())
 				if (!portable)
 					if(!(locate(/obj/structure/table) in range(1, eater)))
-						eater.add_stress(/datum/stressevent/noble_ate_without_table) // look i just had to okay?
+						eater.add_stress(/datum/stress_event/noble_ate_without_table) // look i just had to okay?
 						if (prob(25))
 							to_chat(eater, span_red("I should really eat this at a table..."))
 				switch (faretype)
 					if (FARE_IMPOVERISHED)
-						eater.add_stress(/datum/stressevent/noble_impoverished_food)
+						eater.add_stress(/datum/stress_event/noble_impoverished_food)
 						to_chat(eater, span_red("This is disgusting... how can anyone eat this?"))
 						if (eater.nutrition >= NUTRITION_LEVEL_STARVING)
 							eater.taste(reagents)
 							return
 						else
-							if (eater.has_stress_type(/datum/stressevent/noble_impoverished_food))
-								eater.add_stress(/datum/stressevent/noble_desperate)
+							if (eater.has_stress_type(/datum/stress_event/noble_impoverished_food))
+								eater.add_stress(/datum/stress_event/noble_desperate)
 							apply_effect = FALSE
 					if (FARE_POOR to FARE_NEUTRAL)
-						eater.add_stress(/datum/stressevent/noble_bland_food)
+						eater.add_stress(/datum/stress_event/noble_bland_food)
 						if (prob(25))
 							to_chat(eater, span_red("This is rather bland. I deserve better food than this..."))
 						apply_effect = FALSE
 					if (FARE_FINE)
-						eater.remove_stress(/datum/stressevent/noble_bland_food)
+						eater.remove_stress(/datum/stress_event/noble_bland_food)
 					if (FARE_LAVISH)
-						eater.remove_stress(/datum/stressevent/noble_bland_food)
-						eater.add_stress(/datum/stressevent/noble_lavish_food)
+						eater.remove_stress(/datum/stress_event/noble_bland_food)
+						eater.add_stress(/datum/stress_event/noble_lavish_food)
 						if (prob(25))
 							to_chat(eater, span_green("Ah, food fit for my title."))
 
@@ -325,12 +325,12 @@ All foods are distributed among various categories. Use common sense.
 			if (human_eater.is_yeoman() || human_eater.is_courtier())
 				switch (faretype)
 					if (FARE_IMPOVERISHED)
-						eater.add_stress(/datum/stressevent/noble_bland_food)
+						eater.add_stress(/datum/stress_event/noble_bland_food)
 						apply_effect = FALSE
 						if (prob(25))
 							to_chat(eater, span_red("This is rather bland. I deserve better food than this..."))
 					if (FARE_POOR to FARE_LAVISH)
-						eater.remove_stress(/datum/stressevent/noble_bland_food)
+						eater.remove_stress(/datum/stress_event/noble_bland_food)
 
 	if(eat_effect && apply_effect)
 		if(islist(eat_effect))

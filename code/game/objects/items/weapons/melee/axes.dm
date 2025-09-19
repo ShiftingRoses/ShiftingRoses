@@ -146,7 +146,7 @@
 	max_blade_int = 200
 	max_integrity = INTEGRITY_STANDARD
 	melting_material = /datum/material/iron
-	melt_amount = 75
+	melt_amount = 100
 	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
 	parrysound = "sword"
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -286,7 +286,7 @@
 	max_blade_int = 300
 	max_integrity = INTEGRITY_STRONGEST
 	melting_material = /datum/material/steel
-	melt_amount = 75
+	melt_amount = 100
 	resistance_flags = FIRE_PROOF
 	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
 	wdefense = AVERAGE_PARRY

@@ -55,31 +55,31 @@
 		C.visible_message("<span class='danger'><B>The [src.name] is [pick("torn off", "sundered", "severed", "seperated", "unsewn")]!</B></span>")
 	C.emote("painscream")
 	src.add_mob_blood(C)
-	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
-	C.add_stress(/datum/stressevent/dismembered)
+	C.add_stress(/datum/stress_event/dismembered)
+	C.add_stress(/datum/stress_event/dismembered)
 	var/stress2give
 	if(!skeletonized && C.dna?.species) //we need a skeleton species for skeleton npcs
 		if(C.dna.species.id != SPEC_ID_GOBLIN && C.dna.species.id != SPEC_ID_ROUSMAN) //convert this into a define list later
-			stress2give = /datum/stressevent/viewdismember
+			stress2give = /datum/stress_event/viewdismember
 	if(C)
 		if(C.buckled)
 			if(istype(C.buckled, /obj/structure/fluff/psycross) || istype(C.buckled, /obj/machinery/light/fueled/campfire/pyre))
 				if((C.real_name in GLOB.excommunicated_players) || (C.real_name in GLOB.heretical_players))
-					stress2give = /datum/stressevent/viewsinpunish
+					stress2give = /datum/stress_event/viewsinpunish
 			else if(istype(C.buckled, /obj/structure/guillotine))
 				stress2give = null
 	if(stress2give)
 		for(var/mob/living/carbon/CA in hearers(world.view, C))
 			if(CA != C && !HAS_TRAIT(CA, TRAIT_BLIND))
-				if(stress2give == /datum/stressevent/viewdismember)
+				if(stress2give == /datum/stress_event/viewdismember)
 					if(HAS_TRAIT(CA, TRAIT_STEELHEARTED))
 						continue
 					if(CA.has_flaw(/datum/charflaw/addiction/maniac))
-						CA.add_stress(/datum/stressevent/viewdismembermaniac)
+						CA.add_stress(/datum/stress_event/viewdismembermaniac)
 						CA.sate_addiction()
 						continue
 					if(CA.gender == FEMALE)
-						CA.add_stress(/datum/stressevent/fviewdismember)
+						CA.add_stress(/datum/stress_event/fviewdismember)
 						continue
 				CA.add_stress(stress2give)
 	if(grabbedby)

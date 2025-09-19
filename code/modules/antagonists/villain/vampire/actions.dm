@@ -173,7 +173,7 @@
 		var/mob/living/carbon/human/H = owner
 		QDEL_NULL(H.skin_armor)
 		H.skin_armor = new /obj/item/clothing/armor/skin_armor/vampire_fortitude(H)
-	owner.add_stress(/datum/stressevent/weed)
+	owner.add_stress(/datum/stress_event/weed)
 
 /datum/status_effect/buff/fortitude/on_remove()
 	if(ishuman(owner))

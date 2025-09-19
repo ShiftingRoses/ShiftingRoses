@@ -168,13 +168,10 @@
 				emote("me", 1, "purrs!")
 				if(flags_1 & HOLOGRAM_1)
 					return
-				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, src, /datum/mood_event/pet_animal, src)
+				M.add_stress(/datum/stress_event/pet_animal)
 		else
 			if(M && stat != DEAD)
 				emote("me", 1, "hisses!")
-
-
-
 
 /mob/living/simple_animal/pet/cat/attack_hand(mob/living/carbon/human/M)
 	. = ..()

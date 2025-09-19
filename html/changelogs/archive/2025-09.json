@@ -480,6 +480,43 @@
                 "bugfix": "fixed runechat being cancelled on minor damage"
             }
         ],
+        "KittyNoodle": [
+            {
+                "code_imp": "Removes some very unintentional (hopefully) stuff added to the codebase. Move along citizen."
+            }
+        ],
+        "Arkatos": [
+            {
+                "bugfix": "Secret officiant now works correctly for non clergy also, and triumph buy cost was decreased by 1."
+            },
+            {
+                "bugfix": "Marriages should now give proper surnames, accounting for various titles."
+            }
+        ]
+    },
+    "2025-09-17": {
+        "CheffieGithub": [
+            {
+                "bugfix": "Fixed zigs not getting you high"
+            },
+            {
+                "bugfix": "Fixed zig butts having no icon"
+            }
+        ],
+        "Ambrose997": [
+            {
+                "code_imp": "changed allowed_races to grenz-affiliated ones only for lore accuracy."
+            }
+        ],
+        "ProperPickle": [
+            {
+                "rscadd": "Added a spell for eavesdropping/planting bugs."
+            },
+            {
+                "image": "added phantom ear sprites for spellbook icon, obj icons, and in-text icon. Sprite help from Krayon."
+            },
+            {
+                "code_imp": "added a drop_source parameter which keeps track of whether a drop proc was called by a throw or a drop to prevent qdel double counting."
         "Just-Sim": [
             {
                 "bugfix": "emotes not appearing to other people"
@@ -487,6 +524,43 @@
         ]
     },
     "2025-09-18": {
+        "snowyseshi": [
+            {
+                "rscadd": "Bloodsucker wretch"
+            },
+            {
+                "rscadd": "Caitiff clan"
+            },
+            {
+                "code_imp": "added new variables for VL assignement."
+            }
+        ],
+        "CheffieGithub": [
+            {
+                "bugfix": "Fixed certain herbal brews, vampire spells and some other stuff I don't even know not effecting your mood when they are supposed to."
+            },
+            {
+                "bugfix": "Fixed twist not causing dislocations or fractures"
+            }
+        ]
+    },
+    "2025-09-19": {
+        "grungussuss": [
+            {
+                "qol": "tweaked animated runechat"
+            },
+            {
+                "rscadd": "You can now move diagonally"
+            }
+        ],
+        "7erracotta": [
+            {
+                "rscadd": "Added a new class alongside some sprites"
+            }
+        ],
+        "CheffieGithub": [
+            {
+                "bugfix": "Fix infinite stress events"
         "Just-Sim": [
             {
                 "rscadd": "Sex VFX"

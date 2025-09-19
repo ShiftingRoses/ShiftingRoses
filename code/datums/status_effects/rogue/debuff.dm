@@ -18,13 +18,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/peckish)
+		C.add_stress(/datum/stress_event/peckish)
 
 /datum/status_effect/debuff/hungryt1/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/peckish)
+		C.remove_stress(/datum/stress_event/peckish)
 
 /datum/status_effect/debuff/hungryt2
 	id = "hungryt2"
@@ -41,13 +41,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/hungry)
+		C.add_stress(/datum/stress_event/hungry)
 
 /datum/status_effect/debuff/hungryt2/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/hungry)
+		C.remove_stress(/datum/stress_event/hungry)
 
 /datum/status_effect/debuff/hungryt3
 	id = "hungryt3"
@@ -64,13 +64,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/starving)
+		C.add_stress(/datum/stress_event/starving)
 
 /datum/status_effect/debuff/hungryt3/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/starving)
+		C.remove_stress(/datum/stress_event/starving)
 
 //SILVER DAGGER EFFECT
 
@@ -118,13 +118,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/drym)
+		C.add_stress(/datum/stress_event/drym)
 
 /datum/status_effect/debuff/thirstyt1/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/drym)
+		C.remove_stress(/datum/stress_event/drym)
 
 /datum/status_effect/debuff/thirstyt2
 	id = "thirsty2"
@@ -141,13 +141,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/thirst)
+		C.add_stress(/datum/stress_event/thirst)
 
 /datum/status_effect/debuff/thirstyt2/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/thirst)
+		C.remove_stress(/datum/stress_event/thirst)
 
 /datum/status_effect/debuff/thirstyt3
 	id = "thirsty3"
@@ -164,13 +164,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/parched)
+		C.add_stress(/datum/stress_event/parched)
 
 /datum/status_effect/debuff/thirstyt3/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/parched)
+		C.remove_stress(/datum/stress_event/parched)
 
 /////////
 
@@ -192,7 +192,7 @@
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
 		C.add_nausea(100)
-		C.add_stress(/datum/stressevent/uncookedfood)
+		C.add_stress(/datum/stress_event/uncookedfood)
 
 /datum/status_effect/debuff/badmeal
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/badmeal
@@ -209,7 +209,7 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/badmeal)
+		C.add_stress(/datum/stress_event/badmeal)
 
 /datum/status_effect/debuff/burnedfood
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/burntmeal
@@ -221,7 +221,7 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/burntmeal)
+		C.add_stress(/datum/stress_event/burntmeal)
 		C.add_nausea(100)
 
 /atom/movable/screen/alert/status_effect/debuff/burntmeal
@@ -247,7 +247,7 @@
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
 		C.add_nausea(200)
-		C.add_stress(/datum/stressevent/rotfood)
+		C.add_stress(/datum/stress_event/rotfood)
 
 /datum/status_effect/debuff/bleeding
 	id = "bleedingt1"
@@ -291,13 +291,13 @@
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/sleepytime)
+		C.add_stress(/datum/stress_event/sleepytime)
 
 /datum/status_effect/debuff/sleepytime/on_remove()
 	. = ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/sleepytime)
+		C.remove_stress(/datum/stress_event/sleepytime)
 
 // We use this to not have triumph gain and dreaming tied to tiredness
 /datum/status_effect/debuff/dreamytime
@@ -425,7 +425,7 @@
 	name = "Eoran Wine"
 	desc = span_warning("I am intoxicated from ambromsia not meant for mortal mouths.\n")
 	icon_state = "drunk"
-	
+
 /datum/status_effect/debuff/mesmerised
 	id = "mesmerised"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/mesmerised

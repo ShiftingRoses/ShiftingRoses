@@ -23,7 +23,7 @@
 	id = "play_music"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/playing_music
 	var/effect_color
-	var/datum/stressevent/stress_to_apply
+	var/datum/stress_event/stress_to_apply
 	tick_interval = 10
 
 /datum/status_effect/buff/playing_music/on_creation(mob/living/new_owner, stress, colour)

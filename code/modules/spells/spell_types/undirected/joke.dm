@@ -38,5 +38,5 @@
 		addtimer(CALLBACK(src, PROC_REF(reaction), C), rand(2 SECONDS, 2.5 SECONDS))
 
 /datum/action/cooldown/spell/undirected/joke/proc/reaction(mob/living/carbon/cast_on)
-	cast_on.add_stress(/datum/stressevent/joke)
+	cast_on.add_stress(/datum/stress_event/joke)
 	cast_on.emote(pick("laugh", "chuckle", "giggle"), forced = TRUE)

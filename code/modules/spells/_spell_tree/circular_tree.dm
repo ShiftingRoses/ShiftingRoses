@@ -255,6 +255,14 @@
 	prerequisites = list(/datum/spell_node/arcyne_eye)
 	spell_type = /datum/action/cooldown/spell/undirected/message
 
+/datum/spell_node/phantom_ear
+	name = "Phantom Ear"
+	desc = "Enhance your hearing to perceive distant sounds."
+	node_x = 0
+	node_y = -140
+	prerequisites = list(/datum/spell_node/message)
+	spell_type = /datum/action/cooldown/spell/conjure/phantom_ear
+
 /datum/spell_node/arcyne_affinity
 	name = "Arcyne Affinity"
 	desc = "Devote yourself to Noc."

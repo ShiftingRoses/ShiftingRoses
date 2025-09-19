@@ -32,13 +32,13 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 		loser = challenger.resolve()
 
 	if(winner)
-		winner.remove_stress(/datum/stressevent/graggar_culling_unfinished)
+		winner.remove_stress(/datum/stress_event/graggar_culling_unfinished)
 		winner.verbs -= /mob/living/carbon/human/proc/remember_culling
-		winner.add_stress(/datum/stressevent/graggar_culling_finished)
+		winner.add_stress(/datum/stress_event/graggar_culling_finished)
 		to_chat(winner, span_notice("Your rival's heart has been DESTROYED! While not the glorious consumption Graggar desired, he acknowledges you as not weak."))
 		winner.adjust_triumphs(1)
 	if(loser)
-		loser.remove_stress(/datum/stressevent/graggar_culling_unfinished)
+		loser.remove_stress(/datum/stress_event/graggar_culling_unfinished)
 		loser.verbs -= /mob/living/carbon/human/proc/remember_culling
 		to_chat(loser, span_red("You have FAILED Graggar for the LAST TIME!"))
 		loser.gib()
@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 	qdel(src)
 
 /datum/culling_duel/proc/process_win(mob/living/winner, mob/living/loser)
-	winner.remove_stress(/datum/stressevent/graggar_culling_unfinished)
+	winner.remove_stress(/datum/stress_event/graggar_culling_unfinished)
 	winner.verbs -= /mob/living/carbon/human/proc/remember_culling
 	winner.set_stat_modifier("graggar_culling", STATKEY_STR, 2)
 	winner.set_stat_modifier("graggar_culling", STATKEY_END, 2)
@@ -57,11 +57,11 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 	winner.set_stat_modifier("graggar_culling", STATKEY_LCK, 2)
 	to_chat(winner, span_notice("You have proven your strength to Graggar by consuming your rival's heart! Your rival's power is now YOURS!"))
 	winner.adjust_triumphs(3)
-	winner.add_stress(/datum/stressevent/graggar_culling_finished)
+	winner.add_stress(/datum/stress_event/graggar_culling_finished)
 	winner.playsound_local(winner, 'sound/misc/gods/graggar_omen.ogg', 100)
 
 	if(loser)
-		loser.remove_stress(/datum/stressevent/graggar_culling_unfinished)
+		loser.remove_stress(/datum/stress_event/graggar_culling_unfinished)
 		loser.verbs -= /mob/living/carbon/human/proc/remember_culling
 		to_chat(loser, span_boldred("You have FAILED Graggar for the LAST TIME!"))
 		loser.gib()
@@ -129,7 +129,7 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 		var/second_chosen_location = second_chosen.prepare_deathsight_message()
 
 		// Notify first chosen
-		first_chosen.add_stress(/datum/stressevent/graggar_culling_unfinished)
+		first_chosen.add_stress(/datum/stress_event/graggar_culling_unfinished)
 		first_chosen.add_spell(/datum/action/cooldown/spell/extract_heart)
 		first_chosen.verbs |= /mob/living/carbon/human/proc/remember_culling
 		to_chat(first_chosen, span_userdanger("YOU ARE GRAGGAR'S CONTESTANT!"))
@@ -140,7 +140,7 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 		first_chosen.playsound_local(first_chosen, 'sound/misc/gods/graggar_omen.ogg', 100)
 
 		// Notify second chosen
-		second_chosen.add_stress(/datum/stressevent/graggar_culling_unfinished)
+		second_chosen.add_stress(/datum/stress_event/graggar_culling_unfinished)
 		second_chosen.add_spell(/datum/action/cooldown/spell/extract_heart)
 		second_chosen.verbs |= /mob/living/carbon/human/proc/remember_culling
 		to_chat(second_chosen, span_userdanger("YOU ARE GRAGGAR'S CONTESTANT!"))

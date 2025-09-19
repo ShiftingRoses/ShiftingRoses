@@ -161,6 +161,7 @@
 /obj/structure/fluff/railing/tall/palisade
 	name = "palisade"
 	desc = "A sturdy fence of wooden stakes."
+	icon = 'icons/roguetown/misc/railing.dmi'
 	icon_state = "fence"
 	opacity = TRUE
 	climb_offset = 6
@@ -1113,7 +1114,7 @@
 
 	var/is_priest = is_priest_job(user.mind.assigned_role)
 	var/is_eoran_acolyte = is_monk_job(user.mind.assigned_role) && (user.patron.type == /datum/patron/divine/eora)
-	if(!is_priest && !is_eoran_acolyte)
+	if(!is_priest && !is_eoran_acolyte && !HAS_TRAIT(user, TRAIT_SECRET_OFFICIANT))
 		return ..()
 
 	if(!istype(W, /obj/item/reagent_containers/food/snacks/produce/fruit/apple))
@@ -1185,28 +1186,55 @@
 		to_chat(user, span_warning("[bride.real_name] is already married!"))
 		return FALSE
 
-	var/surname
-	var/name_index = findtext(groom.real_name, " ")
-	var/bride_first_name = bride.real_name
-
 	groom.original_name = groom.real_name
 	bride.original_name = bride.real_name
 
-	if(!name_index)
-		surname = groom.dna.species.random_surname()
+	var/surname
+	var/groom_name_index = findlasttext(groom.real_name, " ")
+
+	if(!groom_name_index)
+		surname = " " + groom.dna.species.random_surname()
 	else
-		if(findtext(groom.real_name, " of ") || findtext(groom.real_name, " the "))
-			surname = groom.dna.species.random_surname()
-			groom.change_name(copytext(groom.real_name, 1, name_index))
+		var/last_word = copytext(groom.real_name, groom_name_index + 1)
+		var/second_last_index = findlasttext(groom.real_name, " ", 1, groom_name_index - 1)
+
+		var/is_title = FALSE
+		if(second_last_index)
+			var/second_last_word = copytext(groom.real_name, second_last_index + 1, groom_name_index)
+			if((lowertext(second_last_word) == "the" || lowertext(second_last_word) == "of") && last_word)
+				is_title = TRUE
+
+		if(is_title)
+			var/surname_index = findlasttext(groom.real_name, " ", 1, second_last_index - 1)
+			if(!surname_index)
+				surname = " " + copytext(groom.real_name, 1, second_last_index)
+				groom.change_name("")
+			else
+				surname = copytext(groom.real_name, surname_index, second_last_index)
+				groom.change_name(copytext(groom.real_name, 1, surname_index))
+		else if(findtext(groom.real_name, " the ") || findtext(groom.real_name, " of "))
+			surname = " " + groom.dna.species.random_surname()
 		else
-			surname = copytext(groom.real_name, name_index)
-			groom.change_name(copytext(groom.real_name, 1, name_index))
+			surname = copytext(groom.real_name, groom_name_index)
+			groom.change_name(copytext(groom.real_name, 1, groom_name_index))
 
-	name_index = findtext(bride.real_name, " ")
-	if(name_index)
-		bride.change_name(copytext(bride.real_name, 1, name_index))
+	var/bride_name_index = findlasttext(bride.real_name, " ")
+	var/bride_first_name = bride.real_name
 
-	bride_first_name = bride.real_name
+	if(bride_name_index)
+		var/last_word_bride = copytext(bride.real_name, bride_name_index + 1)
+		var/second_last_index_bride = findlasttext(bride.real_name, " ", 1, bride_name_index - 1)
+
+		var/is_title_bride = FALSE
+		if(second_last_index_bride)
+			var/second_last_word_bride = copytext(bride.real_name, second_last_index_bride + 1, bride_name_index)
+			if((lowertext(second_last_word_bride) == "the" || lowertext(second_last_word_bride) == "of") && last_word_bride)
+				is_title_bride = TRUE
+
+		if(!is_title_bride && !findtext(bride.real_name, " the ") && !findtext(bride.real_name, " of "))
+			bride.change_name(copytext(bride.real_name, 1, bride_name_index))
+
+		bride_first_name = bride.real_name
 
 	groom.change_name(groom.real_name + surname)
 	bride.change_name(bride.real_name + surname)
@@ -1219,8 +1247,8 @@
 		var/announcement_message = "Eora [groom.gender == bride.gender ? "begrudgingly accepts" : "proudly embraces"] the marriage between [groom.real_name] and [bride_first_name]!"
 		priority_announce(announcement_message, title = "Holy Union!", sound = 'sound/misc/bell.ogg')
 
-	groom.remove_stress(/datum/stressevent/eora_matchmaking)
-	bride.remove_stress(/datum/stressevent/eora_matchmaking)
+	groom.remove_stress(/datum/stress_event/eora_matchmaking)
+	bride.remove_stress(/datum/stress_event/eora_matchmaking)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOBAL_MARRIAGE, groom, bride)
 	record_round_statistic(STATS_MARRIAGES)
 	qdel(apple)
@@ -1306,7 +1334,7 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_BURDEN))
 		. += "slumped and tortured, broken body pertrified and in pain, its chest rose and fell in synch with mine banishing any doubt left, it is me! my own visage glares back at me!"
-		user.add_stress(/datum/stressevent/ring_madness)
+		user.add_stress(/datum/stress_event/ring_madness)
 		return
 	if(ring_destroyed == TRUE)
 		. += "a statue depicting a decapitated man writhing in chains on the ground, it holds its hands out, pleading, in its palms is a glowing ring..."

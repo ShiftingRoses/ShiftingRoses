@@ -166,7 +166,7 @@
 
 	charge = max(0, charge - CHARGE_FOR_CLIMAX)
 
-	user.add_stress(/datum/stressevent/cumok)
+	user.add_stress(/datum/stress_event/cumok)
 	user.emote("moan", forced = TRUE)
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
@@ -228,9 +228,9 @@
 	if(last_arousal_increase_time + 30 SECONDS > world.time)
 		return
 	if(arousal >= BLUEBALLS_GAIN_THRESHOLD)
-		user.add_stress(/datum/stressevent/blue_balls)
+		user.add_stress(/datum/stress_event/blue_balls)
 	else if(arousal <= BLUEBALLS_LOOSE_THRESHOLD)
-		user.remove_stress(/datum/stressevent/blue_balls)
+		user.remove_stress(/datum/stress_event/blue_balls)
 
 /datum/component/arousal/proc/update_erect_state()
 
@@ -350,7 +350,7 @@
 		if(SEX_SPEED_EXTREME)
 			return 1.4
 
-/datum/stressevent/blue_balls
+/datum/stress_event/blue_balls
 	timer = 1 MINUTES
-	stressadd = 2
+	stress_change = 2
 	desc = span_red("My loins ache!")

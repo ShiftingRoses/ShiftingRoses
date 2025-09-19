@@ -832,7 +832,7 @@
 						if(H.virginity)
 							to_chat(user, span_love("Virgin blood, delicious!"))
 							var/mob/living/carbon/V = user
-							V.add_stress(/datum/stressevent/vblood)
+							V.add_stress(/datum/stress_event/vblood)
 							var/used_vitae = 150
 
 							if(C.bloodpool >= 750)

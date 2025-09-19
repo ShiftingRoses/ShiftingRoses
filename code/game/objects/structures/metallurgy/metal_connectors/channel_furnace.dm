@@ -79,7 +79,7 @@
 					tag = "Hardened"
 				var/total_volume = metal.data[material]
 				var/reagent_color = initial(material.color)
-				. += "It contains [total_volume] [UNIT_FORM_STRING(total_volume)] of <font color=[reagent_color]> [tag] [initial(material.name)].</font>"
+				. += "It contains [UNIT_FORM_STRING(total_volume)] of <font color=[reagent_color]> [tag] [initial(material.name)].</font>"
 
 /obj/structure/channel_connector/furnace/attackby(obj/item/I, mob/living/user, params)
 	// Fuel the furnace

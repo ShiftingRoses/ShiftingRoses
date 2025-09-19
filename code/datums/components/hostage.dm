@@ -74,7 +74,7 @@
 	captor.apply_status_effect(/datum/status_effect/holdup)
 	target.apply_status_effect(/datum/status_effect/grouped/heldup, REF(captor))
 
-	target.add_stress(/datum/stressevent/taken_hostage)
+	target.add_stress(/datum/stress_event/taken_hostage)
 
 	stage_timer = addtimer(CALLBACK(src, PROC_REF(update_stage), 2), DELAY_STAGE_2, TIMER_STOPPABLE)
 
@@ -82,7 +82,7 @@
 	var/mob/living/captor = parent
 	captor.remove_status_effect(/datum/status_effect/holdup)
 	target.remove_status_effect(/datum/status_effect/grouped/heldup, REF(captor))
-	target.remove_stress(/datum/stressevent/taken_hostage)
+	target.remove_stress(/datum/stress_event/taken_hostage)
 	deltimer(stage_timer)
 	return ..()
 

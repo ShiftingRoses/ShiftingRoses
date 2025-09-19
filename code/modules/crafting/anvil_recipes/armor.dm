@@ -57,7 +57,7 @@
 /datum/anvil_recipe/armor/iron/splint
 	name = "Splint Armor (+Hide)"
 	recipe_name = "durable light armor"
-	additional_items = list(/obj/item/natural/hide)
+	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/armor/leather/splint
 
 /datum/anvil_recipe/armor/iron/cuirass
@@ -261,15 +261,22 @@
 	recipe_name = "a sturdy iron helmet"
 	created_item = /obj/item/clothing/head/helmet/ironpot
 
+/datum/anvil_recipe/armor/iron/lakkariancap
+	name = "Lakkarian Cap (+ Gold Bar)"
+	recipe_name = "a sturdy lakkarian cap"
+	created_item = /obj/item/clothing/head/helmet/ironpot/lakkariancap
+	additional_items = list(/obj/item/ingot/gold)
+
 /datum/anvil_recipe/armor/iron/nasal_helmet
 	name = "Nasal helmet"
 	recipe_name = "a Nasal helmet"
 	created_item = /obj/item/clothing/head/helmet/nasal
 
 /datum/anvil_recipe/armor/iron/skullcap
-	name = "Skullcap"
-	recipe_name = "a skullcap"
+	name = "x2 Skullcap"
+	recipe_name = "Two skullcaps"
 	created_item = /obj/item/clothing/head/helmet/skullcap
+	createditem_extra = 1
 
 /datum/anvil_recipe/armor/iron/helmetkettle
 	name = "Iron Kettle Helmet"
@@ -347,13 +354,6 @@
 	name = "Light Plate Boots"
 	recipe_name = "a pair of Light Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/armor/light
-
-/datum/anvil_recipe/armor/iron/nasal_helmet
-	name = "Nasal helmet"
-	recipe_name = "a Nasal helmet"
-	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/head/helmet/nasal
-	craftdiff = 1
 
 /datum/anvil_recipe/armor/iron/town_watch_helmet
 	name = "Town Watch helmet"
@@ -572,15 +572,23 @@
 	craftdiff = 3
 
 // STEEL HELMETS
+/datum/anvil_recipe/armor/steel/nasal_helmet
+	name = "x2 Nasal helmet"
+	recipe_name = "Two nasal helmets"
+	created_item = /obj/item/clothing/head/helmet/nasal
+	craftdiff = 1
+	createditem_extra = 1
+
 /datum/anvil_recipe/armor/steel/helmetbuc
 	name = "Great Helm"
 	recipe_name = "a Bucket Helmet"
 	created_item = (/obj/item/clothing/head/helmet/heavy/bucket)
 
 /datum/anvil_recipe/armor/steel/helmetkettle
-	name = "Kettle Helmet"
-	recipe_name = "a Kettle Helmet"
+	name = "x2 Kettle Helmet"
+	recipe_name = "Two kettle helmets"
 	created_item = /obj/item/clothing/head/helmet/kettle
+	createditem_extra = 1
 
 /datum/anvil_recipe/armor/steel/helmetslitkettle
 	name = "Slitted Kettle Helmet"

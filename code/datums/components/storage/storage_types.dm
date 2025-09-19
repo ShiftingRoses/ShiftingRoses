@@ -63,7 +63,7 @@
 			var/mob/living/carbon/human/uncomfy = boots.loc
 			if(uncomfy.shoes != parent)
 				return
-			uncomfy.add_stress(/datum/stressevent/fullshoe)
+			uncomfy.add_stress(/datum/stress_event/fullshoe)
 
 /datum/component/storage/concrete/boots/remove_from_storage(atom/movable/removed, atom/new_location)
 	. = ..()
@@ -77,9 +77,9 @@
 		if(length(real_location.contents))
 			for(var/obj/item/I in real_location.contents)
 				if(!istype(I, /obj/item/weapon/knife))
-					uncomfy.add_stress(/datum/stressevent/fullshoe)
+					uncomfy.add_stress(/datum/stress_event/fullshoe)
 					return
-		uncomfy.remove_stress(/datum/stressevent/fullshoe)
+		uncomfy.remove_stress(/datum/stress_event/fullshoe)
 		return
 
 /datum/component/storage/concrete/boots/proc/equipped_stress(datum/source, mob/user, slot)
@@ -93,10 +93,10 @@
 		if(length(real_location.contents))
 			for(var/obj/item/I in real_location.contents)
 				if(!istype(I, /obj/item/weapon/knife))
-					uncomfy.add_stress(/datum/stressevent/fullshoe)
+					uncomfy.add_stress(/datum/stress_event/fullshoe)
 					return
 
 /datum/component/storage/concrete/boots/proc/unequipped_stress(datum/source, mob/living/carbon/user)
 	if(!istype(user) || (user.shoes != parent) )
 		return
-	user.remove_stress(/datum/stressevent/fullshoe)
+	user.remove_stress(/datum/stress_event/fullshoe)

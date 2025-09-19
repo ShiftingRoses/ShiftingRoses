@@ -36,11 +36,11 @@
 
 	if(fufilled_metal)
 		var/reagent_color = initial(filling_metal.color)
-		. += "[src] has [fufilled_metal] [UNIT_FORM_STRING(fufilled_metal)] of <font color=[reagent_color]> Molten [initial(filling_metal.name)]</font> out of [required_metal] [UNIT_FORM_STRING(required_metal)].</font>"
+		. += "[src] has [UNIT_FORM_STRING(fufilled_metal)] of <font color=[reagent_color]> Molten [initial(filling_metal.name)]</font> out of [UNIT_FORM_STRING(required_metal)].</font>"
 		if(average_quality > 0)
 			. += "The metal quality appears to be [average_quality]."
 	else
-		. += "[src] requires [required_metal] [UNIT_FORM_STRING(fufilled_metal)] of Molten Metal to form.</font>"
+		. += "[src] requires [UNIT_FORM_STRING(required_metal)] of Molten Metal to form.</font>"
 
 /obj/item/mould/attackby(obj/item/I, mob/living/user, params)
 	. = ..()

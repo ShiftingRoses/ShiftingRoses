@@ -5,7 +5,7 @@
 	volume = 100
 	falloff_exponent = 2
 	extra_range = 5
-	var/stress2give = /datum/stressevent/music
+	var/stress2give = /datum/stress_event/music
 	persistent_loop = TRUE
 	sound_group = /datum/sound_group/instruments
 

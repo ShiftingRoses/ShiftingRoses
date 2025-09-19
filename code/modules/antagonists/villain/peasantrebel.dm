@@ -30,7 +30,7 @@
 	owner.special_role = ROLE_PREBEL
 	var/mob/living/carbon/human/H = owner.current
 	H.cmode_music = 'sound/music/cmode/antag/CombatSausageMaker.ogg'
-	H.add_stress(/datum/stressevent/prebel)
+	H.add_stress(/datum/stress_event/prebel)
 	ADD_TRAIT(H, TRAIT_VILLAIN, TRAIT_GENERIC)
 	create_objectives()
 	owner.current.log_message("has been converted to the revolution!", LOG_ATTACK, color="red")

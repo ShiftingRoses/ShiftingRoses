@@ -186,5 +186,5 @@
 	var/result_amount = reagent_requirements[first]
 	if(water_conversion > 0)
 		result_amount = CEILING((result_amount * water_conversion), 1)
-	html += "[result_amount] [UNIT_FORM_STRING(result_amount)] of [initial(created_reagent.name)]<br>"
+	html += "[UNIT_FORM_STRING(result_amount)] of [initial(created_reagent.name)]<br>"
 	return html

@@ -102,7 +102,7 @@
 	if(M.toxloss <= 60)
 		M.adjustToxLoss(1*REM, 0)
 	if(current_cycle >= 4)
-		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "smacked out", /datum/mood_event/narcotic_heavy, name)
+		M.add_stress(/datum/stress_event/narcotic_heavy)
 	if(current_cycle >= 18)
 		M.Sleeping(40, 0)
 	..()

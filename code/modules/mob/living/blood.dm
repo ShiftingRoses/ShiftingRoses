@@ -87,7 +87,7 @@
 	if(dna?.species)
 		if(NOBLOOD in dna.species.species_traits)
 			blood_volume = BLOOD_VOLUME_NORMAL
-			remove_stress(/datum/stressevent/bleeding)
+			remove_stress(/datum/stress_event/bleeding)
 			remove_status_effect(/datum/status_effect/debuff/bleeding)
 			remove_status_effect(/datum/status_effect/debuff/bleedingworse)
 			remove_status_effect(/datum/status_effect/debuff/bleedingworst)
@@ -144,9 +144,9 @@
 		for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 			bodypart.try_bandage_expire()
 		bleed(bleed_rate)
-		add_stress(/datum/stressevent/bleeding)
+		add_stress(/datum/stress_event/bleeding)
 	else
-		remove_stress(/datum/stressevent/bleeding)
+		remove_stress(/datum/stress_event/bleeding)
 
 /mob/living/proc/get_bleed_rate()
 	var/bleed_rate = 0

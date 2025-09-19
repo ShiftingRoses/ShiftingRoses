@@ -33,6 +33,6 @@
 			if(HAS_TRAIT(HL, TRAIT_ORPHAN) || HAS_TRAIT(HL, TRAIT_OLDPARTY))
 				to_chat(HL, span_reallybig("[brat_name]!"))
 				if(HAS_TRAIT(HL, TRAIT_ORPHAN))
-					HL.add_stress(/datum/stressevent/mother_calling)
+					HL.add_stress(/datum/stress_event/mother_calling)
 				else
-					HL.add_stress(/datum/stressevent/friend_calling)
+					HL.add_stress(/datum/stress_event/friend_calling)

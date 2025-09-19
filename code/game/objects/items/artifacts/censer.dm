@@ -23,8 +23,8 @@
 	duration = 15 MINUTES
 	effectedstats = list("endurance" = 1, "constitution" = 1)
 
-/datum/stressevent/syoncalamity
-	stressadd = 15
+/datum/stress_event/syoncalamity
+	stress_change = 15
 	desc = span_boldred("Yet another part of Psydon lost!")
 	timer = 15 MINUTES
 
@@ -119,7 +119,7 @@
 		possible_item_intents = list(/datum/intent/weep)
 		user.update_a_intents()
 		for(var/mob/living/carbon/human/H in view(get_turf(src)))
-			H.add_stress(/datum/stressevent/syoncalamity)
+			H.add_stress(/datum/stress_event/syoncalamity)
 	if(isitem(A) && on && user.used_intent.type == /datum/intent/bless)
 		var/datum/component/psyblessed/CP = A.GetComponent(/datum/component/psyblessed)
 		if(!CP)

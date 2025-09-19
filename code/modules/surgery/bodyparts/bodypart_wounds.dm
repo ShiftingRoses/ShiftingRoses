@@ -198,9 +198,6 @@
 					added_wound = /datum/wound/bite/small
 					do_crit = FALSE // This is like leaving a mark on your skin or getting bit by a cat
 
-	if(!added_wound)
-		return
-
 	if(do_crit)
 		var/crit_attempt = try_crit(bclass, dam, user, zone_precise, silent, crit_message)
 		if(crit_attempt)
@@ -569,7 +566,7 @@
 	if(owner)
 		if(!owner.has_embedded_objects())
 			owner.clear_alert("embeddedobject")
-			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "embedded")
+			owner.remove_stress(/datum/stress_event/embedded)
 		if(can_be_disabled)
 			update_disabled()
 	return TRUE

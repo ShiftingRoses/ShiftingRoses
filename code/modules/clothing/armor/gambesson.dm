@@ -51,6 +51,17 @@
 /obj/item/clothing/armor/gambeson/heavy/colored/dark
 	color = CLOTHING_DARK_INK
 
+/obj/item/clothing/armor/gambeson/lakkarijupon
+	name = "lakkarian jupon"
+	desc = "a thick, quilted jupon with an iron heart protector. Apart of the standard traveling uniform for Lakkarian clerics. It's great for the southern desert's heat and northern tundra's cold."
+	icon_state = "lakkarijupon"
+	max_integrity = INTEGRITY_STRONG
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	sewrepair = TRUE
+
+	armor = ARMOR_PADDED_GOOD
+
 /obj/item/clothing/armor/gambeson/apothecary
 	name = "apothecary overcoat"
 	desc = "An armoured overcoat that can take a few hits. Men have lost their lives for less."

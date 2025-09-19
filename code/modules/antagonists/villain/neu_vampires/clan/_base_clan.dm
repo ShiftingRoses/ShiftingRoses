@@ -43,7 +43,6 @@ And it also helps for the character set panel
 	var/non_vampire_title = "Slave"
 	var/datum/clan_hierarchy_node/hierarchy_root
 	var/list/datum/clan_hierarchy_node/all_positions = list()
-
 	var/curse = "None."
 
 	var/clane_curse //There should be a reference here.
@@ -64,6 +63,7 @@ And it also helps for the character set panel
 	var/mob/living/clan_leader
 	var/leader_title = "Vampire Lord"
 	var/datum/clan_leader/leader = /datum/clan_leader/lord
+	var/force_VL_if_clan_is_empty = TRUE
 	var/selectable_by_vampires = TRUE // Set to FALSE for clans that shouldn't be selectable
 
 /datum/clan/proc/get_downside_string()
@@ -168,7 +168,7 @@ And it also helps for the character set panel
 
 /datum/clan/proc/handle_member_joining(mob/living/carbon/human/H, is_vampire = TRUE)
 	// If no clan leader exists, make this person the leader (vampires only)
-	if(!clan_leader && is_vampire)
+	if(!clan_leader && is_vampire && force_VL_if_clan_is_empty)
 		hierarchy_root.assign_member(H)
 		if(ispath(leader))
 			var/datum/clan_leader/new_leader = new leader()
@@ -369,7 +369,7 @@ And it also helps for the character set panel
 
 /datum/clan/proc/post_gain(mob/living/carbon/human/H)
 	SHOULD_CALL_PARENT(TRUE)
-	if(!clan_leader && ispath(leader))
+	if(!clan_leader && ispath(leader) && force_VL_if_clan_is_empty)
 		var/datum/clan_leader/new_leader = new leader()
 		leader = new_leader
 		leader.lord_title = leader_title
@@ -426,6 +426,7 @@ And it also helps for the character set panel
 	if (!new_clan)
 		return
 	clan.on_gain(src)
+
 
 /**
  * Gives the human a vampiric Clan, applying
@@ -500,16 +501,16 @@ And it also helps for the character set panel
 /datum/status_effect/debuff/blood_disgust/on_apply()
 	. = ..()
 	if(.)
-		owner.add_stress(/datum/stressevent/bad_blood)
+		owner.add_stress(/datum/stress_event/bad_blood)
 		owner.adjustBruteLoss(5)
 
 /datum/status_effect/debuff/blood_disgust/on_remove()
 	. = ..()
-	owner.remove_stress(/datum/stressevent/bad_blood)
+	owner.remove_stress(/datum/stress_event/bad_blood)
 
-/datum/stressevent/bad_blood
+/datum/stress_event/bad_blood
 	desc = span_warning("That blood was revolting!")
-	stressadd = 3
+	stress_change = 3
 	max_stacks = 10
-	stressadd_per_extra_stack = 3
+	stress_change_per_extra_stack = 3
 	timer = 10 MINUTES

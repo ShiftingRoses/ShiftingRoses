@@ -107,7 +107,7 @@
 	var/obj/item/organ/heart/H = V.getorganslot(ORGAN_SLOT_HEART)
 	if(H && !QDELETED(dream_master))
 		if(!length(H.maniacs))
-			V.add_stress(/datum/stressevent/saw_wonder)
+			V.add_stress(/datum/stress_event/saw_wonder)
 			V.add_curse(/datum/curse/schizophrenic, silent = TRUE) //let's not jumpscare normal people
 		//	V.add_client_colour(/datum/client_colour/maniac_marked) //Hurt peoples's eyes, we instead give them zizo's curse which make them experience the maniac's hallucinations, how cool.
 		if(!(dream_master in H.maniacs))

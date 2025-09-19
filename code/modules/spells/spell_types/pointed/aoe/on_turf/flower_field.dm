@@ -476,7 +476,7 @@
 
 	if (iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.add_stress(/datum/stressevent/ozium)//i think this is the screen effect thing
+		C.add_stress(/datum/stress_event/ozium)//i think this is the screen effect thing
 
 /datum/status_effect/debuff/poppy_arena/on_remove()
 	REMOVE_TRAIT(owner, TRAIT_NOPAIN, TRAIT_GENERIC)
@@ -484,7 +484,7 @@
 
 	if (iscarbon(owner))
 		var/mob/living/carbon/C = owner
-		C.remove_stress(/datum/stressevent/ozium)
+		C.remove_stress(/datum/stress_event/ozium)
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/debuff/poppy_arena

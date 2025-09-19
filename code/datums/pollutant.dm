@@ -43,10 +43,10 @@
 			continue
 		if(!H.can_smell())
 			continue
-		if(H.has_stress_type(/datum/stressevent/perfume))
+		if(H.has_stress_type(/datum/stress_event/perfume))
 			continue
 
-		H.add_stress(/datum/stressevent/perfume)
+		H.add_stress(/datum/stress_event/perfume)
 		if(prob(2))
 			H.visible_message(span_green("The [descriptor] of [scent] bombards my nostrils."))
 

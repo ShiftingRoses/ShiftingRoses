@@ -1549,8 +1549,9 @@
 			to_chat(M, "*--------*")
 			if(!length(M.stressors))
 				to_chat(M, span_info("I'm not feeling much of anything right now."))
-			for(var/stress_type in M.stressors)
-				var/datum/stressevent/stress_event = M.stressors[stress_type]
+			for(var/datum/stress_event/stress_event in M.stressors)
+				if(!stress_event.can_show())
+					continue
 				var/count = stress_event.stacks
 				var/ddesc = islist(stress_event.desc) ? pick(stress_event.desc) : stress_event.desc
 				if(count > 1)
@@ -1563,8 +1564,7 @@
 				to_chat(M, "<span class='warning'>I haven't TRIUMPHED.</span>")
 				return
 			if(alert("Do you want to remember a TRIUMPH?", "", "Yes", "No") == "Yes")
-				var/mob/living/carbon/V = M
-				if(V.add_stress(/datum/stressevent/triumph))
+				if(M.add_stress(/datum/stress_event/triumph))
 					M.adjust_triumphs(-1)
 					M.playsound_local(M, 'sound/misc/notice (2).ogg', 100, FALSE)
 

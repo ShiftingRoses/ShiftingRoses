@@ -153,9 +153,9 @@
 	if(ishuman(owner) && sleptonground)
 		var/mob/living/carbon/human/human_owner = owner
 		if(HAS_TRAIT(human_owner, TRAIT_NOBLE))
-			human_owner.add_stress(/datum/stressevent/sleepfloornoble)
+			human_owner.add_stress(/datum/stress_event/sleepfloornoble)
 		else
-			human_owner.add_stress(/datum/stressevent/sleepfloor)
+			human_owner.add_stress(/datum/stress_event/sleepfloor)
 	. = ..()
 
 /datum/status_effect/incapacitating/sleeping/tick()

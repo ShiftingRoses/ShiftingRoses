@@ -295,7 +295,7 @@
 /datum/reagent/soap/on_mob_life(mob/living/carbon/M)
 	..()
 	if(ishuman(M))
-		M.add_stress(/datum/stressevent/mouthsoap)
+		M.add_stress(/datum/stress_event/mouthsoap)
 
 /datum/reagent/soap/add_to_member(obj/effect/abstract/liquid_turf/adder)
 	. = ..()

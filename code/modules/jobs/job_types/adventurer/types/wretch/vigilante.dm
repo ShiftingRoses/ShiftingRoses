@@ -2,7 +2,7 @@
 	name = "Renegade"
 	tutorial = "A renegade, deserter and a gunslinger, Favoured by Matthios, You've turned your back on the black empire and psydon alike, Now? you wander around Faience, wielding black powder, grit, and a gambler's instinct."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_PLAYER_ALL
+	allowed_races = RACES_PLAYER_GRENZ
 	outfit = /datum/outfit/job/wretch/vigilante
 	category_tags = list(CTAG_WRETCH)
 	maximum_possible_slots = 1 //There can be only one.

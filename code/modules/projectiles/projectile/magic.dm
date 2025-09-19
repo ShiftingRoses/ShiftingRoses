@@ -185,10 +185,7 @@
 	. = ..()
 	if(ismob(target))
 		var/mob/M = target
-		if(M.can_block_magic(MAGIC_RESISTANCE))
-			M.visible_message("<span class='warning'>[src] vanishes on contact with [target]!</span>")
-			return BULLET_ACT_BLOCK
-		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, src, /datum/mood_event/sapped)
+		M.add_stress(/datum/stress_event/sapped)
 
 /obj/projectile/magic/necropotence
 	name = "bolt of necropotence"
