@@ -1,7 +1,7 @@
 
 /obj/machinery/essence/combiner
 	name = "essence combiner"
-	desc = "An intricate alchemical apparatus used to merge basic essences into more complex compounds. Can handle multiple combination recipes simultaneously."
+	desc = "An agitating element within a simple glass container, designed to blend essences together. Can handle multiple combination recipes simultaneously."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "combiner"
 	density = TRUE

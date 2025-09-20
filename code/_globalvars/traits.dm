@@ -161,7 +161,6 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"Endless Slumber" = TRAIT_TORPOR,
 		"Boundless Energy" = TRAIT_NOENERGY,
 		"Keen Ears"	= TRAIT_KEENEARS,
-		"Head Butcher" = TRAIT_HEAD_BUTCHER,
 	),
 	/obj/item/bodypart = list(
 		"TRAIT_PARALYSIS" = TRAIT_PARALYSIS
@@ -188,8 +187,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_NOSTINK = span_dead("My nose is numb to the smell of decay."),
 	TRAIT_ZJUMP = "Time to reach a new height.",
 	TRAIT_JESTERPHOBIA = span_warning("I have a severe irrational fear of Jesters"),
-	TRAIT_XENOPHOBIC = span_warning("Lesser races pollute our land"),
-	TRAIT_TOLERANT = span_info("I dream of an ideal future, one with peace between all races"),
+	TRAIT_XENOPHOBIC = span_warning("Lesser species pollute our land"),
+	TRAIT_TOLERANT = span_info("I dream of an ideal future, one with peace between all species"),
 	TRAIT_NOSEGRAB = "I love to grab idiots by their noses!",
 	TRAIT_NUTCRACKER = "I love kicking idiots on the nuts!",
 	TRAIT_SEEPRICES = "I can tell the prices of things down to the zenny.",

@@ -3,6 +3,7 @@
 	desc = "Shoot out a ball of fire that emits a light explosion on impact, setting the target alight."
 	button_icon_state = "fireball"
 	charge_sound = 'sound/magic/charging_fire.ogg'
+	sound = 'sound/magic/fireball.ogg'
 
 	cast_range = 8
 	point_cost = 4
@@ -24,19 +25,14 @@
 	to_fire.exp_light *= attuned_strength
 	to_fire.exp_fire *= attuned_strength
 
-/obj/projectile/magic/aoe/fireball/rogue
-	name = "fireball"
-	exp_heavy = 0
-	exp_light = 3
-	exp_flash = 0
-	exp_fire = 3
-	damage = 10
-	damage_type = BURN
-	nodamage = FALSE
-	flag = "magic"
-	hitsound = 'sound/fireball.ogg'
-	aoe_range = 0
-	speed = 3
+/datum/action/cooldown/spell/projectile/fireball/baali
+	name = "Infernal Fireball"
+
+	invocation = "FR BRTH"
+	invocation_type = "whisper"
+
+	charge_time = 4 SECONDS
+	cooldown_time = 20 SECONDS
 
 /datum/action/cooldown/spell/projectile/fireball/greater
 	name = "Fireball (Greater)"
@@ -56,6 +52,20 @@
 	spell_flags = NONE
 
 	projectile_type = /obj/projectile/magic/aoe/fireball/rogue/great
+
+/obj/projectile/magic/aoe/fireball/rogue
+	name = "fireball"
+	exp_heavy = 0
+	exp_light = 3
+	exp_flash = 0
+	exp_fire = 3
+	damage = 10
+	damage_type = BURN
+	nodamage = FALSE
+	flag = "magic"
+	hitsound = 'sound/fireball.ogg'
+	aoe_range = 0
+	speed = 3
 
 /obj/projectile/magic/aoe/fireball/rogue/great
 	name = "fireball"

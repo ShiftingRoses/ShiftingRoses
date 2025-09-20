@@ -1,6 +1,6 @@
 /obj/structure/essence_node
 	name = "essence node"
-	desc = "A crystalline formation that naturally accumulates thaumaturgical essence. It pulses with inner energy."
+	desc = "A weakened point in the environment that allows access to alchemical essence. It pulses with inner energy."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "node"
 	density = FALSE
@@ -175,7 +175,7 @@
 
 /obj/structure/essence_node/rare
 	tier = 1
-	desc = "A magnificent crystalline formation that pulses with concentrated essence. These rare nodes contain immense power."
+	desc = "A pulsating blister that oozes with concentrated essence. These rare nodes contain immense power."
 	icon_state = "node"
 
 /obj/structure/essence_node/fire
@@ -195,7 +195,7 @@
 
 /obj/item/essence_node_portable
 	name = "essence node"
-	desc = "A crystalline formation contained within a portable state. It still pulses with thaumaturgical energy."
+	desc = "A large amount of essence still wrapped within it's enviormental shell. It still beats with alchemical energy."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "essence"
 	w_class = WEIGHT_CLASS_BULKY

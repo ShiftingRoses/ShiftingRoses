@@ -569,5 +569,31 @@
                 "rscadd": "Sex SFX"
             }
         ]
+    },
+    "2025-09-20": {
+        "Wouju": [
+            {
+                "rscadd": "Heads are now guaranteed when butchering"
+            },
+            {
+                "rscadd": "You can butcher heads with MMB and a knife to get extra meats"
+            }
+        ],
+        "wgtjunior743": [
+            {
+                "bugfix": "Prevents the Tome sleep bug from happening."
+            },
+            {
+                "bugfix": "Crusaders from Crusader Wave not getting their grenzel accent"
+            }
+        ],
+        "CheffieGithub": [
+            {
+                "rscadd": "Converted various things to balloon alerts for readability."
+            },
+            {
+                "rscadd": "Re-added reagent container transfer amount changing. Shift left/right click to \\\"scroll\\\" the transfer amounts, report containers with only one option."
+            }
+        ]
     }
 }

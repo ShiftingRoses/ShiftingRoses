@@ -249,10 +249,10 @@
 			</body>
 		</html>
 	"}
-	var/datum/browser/popup = new(user, "dreams", "<center>Dreams</center>", 350, 450)
-	popup.set_window_options(can_close = FALSE)
+	var/datum/browser/popup = new(user, "dreams", "<center>Dreams</center>", 350, 450, src)
+	popup.set_window_options(can_close = FALSE) // Does nothing
 	popup.set_content(dat.Join())
-	popup.open(FALSE)
+	popup.open(TRUE)
 
 /datum/sleep_adv/proc/close_ui()
 	if(!mind.current)
@@ -369,6 +369,9 @@
 		return
 	if(!is_considered_sleeping())
 		close_ui()
+		return
+	if(href == "close=1")
+		finish()
 		return
 	switch(href_list["task"])
 		if("buy_skill")

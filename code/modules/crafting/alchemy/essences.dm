@@ -1,6 +1,6 @@
 /obj/item/essence_vial
 	name = "essence vial"
-	desc = "A small crystalline vial designed to hold thaumaturgical essences."
+	desc = "A small crystalline vial designed to hold alchemical essences."
 	icon = 'icons/roguetown/items/glass_reagent_container.dmi'
 	icon_state = "essence_vial"
 	w_class = WEIGHT_CLASS_TINY
@@ -194,7 +194,7 @@
 
 /datum/thaumaturgical_essence/magic
 	name = "Magic Essence"
-	desc = "The essence of pure arcane power."
+	desc = "The essence of pure arcynic power."
 	tier = 2
 	color = "#9370DB"
 	icon_state = "essence_magic"

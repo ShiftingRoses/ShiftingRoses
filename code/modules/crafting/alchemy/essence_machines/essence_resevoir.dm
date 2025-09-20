@@ -1,6 +1,6 @@
 /obj/machinery/essence/reservoir
 	name = "essence reservoir"
-	desc = "A large crystalline tank for storing massive quantities of thaumaturgical essences."
+	desc = "A large glass sphere for storing massive quantities of alchemical essences."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "essence_tank"
 	density = TRUE

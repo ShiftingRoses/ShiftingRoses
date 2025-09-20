@@ -476,7 +476,7 @@
 	dir = 10
 	},
 /obj/item/reagent_containers/powder/moondust,
-/obj/item/clothing/neck/mercmedal/zybatine,
+/obj/item/clothing/neck/mercmedal/zaladian,
 /turf/open/floor/dirt,
 /area/rogue/indoors/shelter/bog)
 "fP" = (

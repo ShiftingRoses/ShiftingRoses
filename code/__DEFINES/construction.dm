@@ -87,3 +87,9 @@
 #define RCD_UPGRADE_FRAMES	1
 #define RCD_UPGRADE_SIMPLE_CIRCUITS	2
 #define RCD_UPGRADE_SILO_LINK	4
+
+#define FORWARD 1
+#define BACKWARD -1
+
+#define ITEM_DELETE "delete"
+#define ITEM_MOVE_INSIDE "move_inside"

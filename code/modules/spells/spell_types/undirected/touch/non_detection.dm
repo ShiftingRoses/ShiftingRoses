@@ -59,7 +59,7 @@
 	color = "#3FBAFD"
 
 /atom/movable/screen/alert/status_effect/non_detection
-	name = "Thaumaturgical Voice"
+	name = "Ashen Cloak"
 	desc = "I am projected from divination magic for a time."
 	icon_state = "stressvg"
 

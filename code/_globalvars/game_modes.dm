@@ -8,3 +8,5 @@ GLOBAL_VAR_INIT(wavesecret, 0) // meteor mode, delays wave progression, terrible
 
 //TODO clear this one up too
 GLOBAL_DATUM(cult_narsie, /obj/singularity/narsie/large/cult)
+
+GLOBAL_LIST_EMPTY(frenzy_list)

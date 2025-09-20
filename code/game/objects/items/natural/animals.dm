@@ -73,14 +73,59 @@
 
 /obj/item/natural/head
 	possible_item_intents = list(/datum/intent/use)
+	layer = 3.1
+	grid_height = 64
+	grid_width = 64
+	w_class = WEIGHT_CLASS_NORMAL
+	var/meat_to_give = /obj/item/reagent_containers/food/snacks/meat/steak
+	var/rotten = FALSE
+
+//quality from butchering, 0 is bad, 1 is normal, 2 is good, -1 means its rotten and useless
+/obj/item/natural/head/proc/ButcheringResults(butchering_quality)
+	switch(butchering_quality)
+		if(0)
+			sellprice = floor(sellprice * 0.75)
+			headpricemin = floor(headpricemin * 0.75)
+			headpricemax = floor(headpricemax * 0.75)
+		if(1)
+			//nothing
+		if(2)
+			sellprice = floor(sellprice * 1.25)
+			headpricemin = floor(headpricemin * 1.25)
+			headpricemax = floor(headpricemax * 1.25)
+		if(-1)
+			sellprice = floor(sellprice * 0.1)
+			headpricemin = floor(headpricemin * 0.1)
+			headpricemax = floor(headpricemax * 0.1)
+			var/initial_name = name
+			name = "rotten [initial_name]"
+			rotten = TRUE
+
+/obj/item/natural/head/MiddleClick(mob/living/user, params)
+	var/obj/item/held_item = user.get_active_held_item()
+	if(held_item)
+		var/path_to_check = ispath(held_item) ? held_item : held_item.type
+		if(ispath(path_to_check, /obj/item/weapon/knife))
+			var/butchering_skill = user.get_skill_level(/datum/skill/labor/butchering)
+			var/used_time = 8
+			used_time = (used_time - 0.5 * butchering_skill) SECONDS
+			visible_message("[user] begins to butcher \the [src].")
+			playsound(src, 'sound/foley/gross.ogg', 100, FALSE)
+			var/amt2raise = user.STAINT/4
+			if(do_after(user, used_time, src))
+				var/obj/item/I = new meat_to_give(get_turf(src))
+				if(rotten && istype(I,/obj/item/reagent_containers/food/snacks))
+					var/obj/item/reagent_containers/food/snacks/F = I
+					F.become_rotten()
+				new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
+				user.adjust_experience(/datum/skill/labor/butchering, amt2raise, FALSE)
+				qdel(src)
+	..()
 
 /obj/item/natural/head/volf
 	name = "volf head"
 	desc = "The severed head of a fearsome volf."
 	icon_state = "volfhead"
-	layer = 3.1
-	grid_height = 64
-	grid_width = 64
 	headpricemin = 3
 	headpricemax = 7
 	sellprice = 5
@@ -89,9 +134,6 @@
 	name = "saiga head"
 	desc = "The severed head of a proud saiga."
 	icon_state = "saigahead"
-	layer = 3.1
-	grid_height = 64
-	grid_width = 64
 	headprice = 3
 	sellprice = 3
 
@@ -99,8 +141,9 @@
 	name = "troll head"
 	desc = "The severed head of a giant troll."
 	icon_state = "trollhead"
-	layer = 3.1
-	w_class = WEIGHT_CLASS_HUGE
+	grid_height = 96
+	grid_width = 96
+	w_class = WEIGHT_CLASS_BULKY
 	headpricemin = 80
 	headpricemax = 230
 	sellprice = 155
@@ -127,41 +170,35 @@
 	name = "rous head"
 	desc = "The severed head of an unusually large rat."
 	icon_state = "roushead"
-	layer = 3.1
-	grid_height = 64
-	grid_width = 64
 	headpricemin = 3
 	headpricemax = 7
 	sellprice = 5
+	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/mince/beef
 
 /obj/item/natural/head/spider
-	name = "honeyspider head"
-	desc = "The severed head of a venomous honeyspider."
+	name = "beespider head"
+	desc = "The severed head of a venomous beespider."
 	icon_state = "spiderhead"
-	layer = 3.1
-	grid_height = 64
-	grid_width = 64
 	headpricemin = 4
 	headpricemax = 20
 	sellprice = 12
+	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
 
 /obj/item/natural/head/bug
 	name = "bogbug head"
 	desc = "The severed head of a gross bogbug."
 	icon_state = "boghead"
-	layer = 3.1
-	grid_height = 64
-	grid_width = 64
 	headpricemin = 4
 	headpricemax = 15
 	sellprice = 10
+	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
 
 /obj/item/natural/head/mole
 	name = "mole head"
 	desc = "The severed head of a lesser mole."
 	icon_state = "molehead"
-	layer = 3.1
-	w_class = WEIGHT_CLASS_HUGE
+	grid_height = 96
+	grid_width = 96
 	headpricemin = 3
 	headpricemax = 7
 	sellprice = 5
@@ -173,7 +210,6 @@
 	name = "gote head"
 	desc = "The severed head of a fiery gote."
 	icon_state = "gotehead"
-	layer = 3.1
 	headprice = 2
 	sellprice = 2
 

@@ -9,10 +9,13 @@
 	grid_width = 32
 	/// Starting transfer amount
 	var/amount_per_transfer_from_this = 5
+	/// Does this container allow changing transfer amounts at all, the container can still have only one possible transfer value in possible_transfer_amounts at some point even if this is true
+	var/has_variable_transfer_amount = TRUE
 	/// List of selectable transfer amounts
 	var/list/possible_transfer_amounts = list(5, 10, 15, 20, 25, 30)
 	/// Reagents max volume
 	var/volume = 30
+	/// Reagent flags, a few examples being if the container is open or not, if its transparent, if you can inject stuff in and out of the container, and so on
 	var/reagent_flags
 	/// Whether this can be splashed
 	var/spillable = FALSE
@@ -58,6 +61,11 @@
 
 	if(is_open_container())
 		GLOB.weather_act_upon_list |= src
+
+/obj/item/reagent_containers/examine(mob/user)
+	. = ..()
+	if(has_variable_transfer_amount && length(possible_transfer_amounts) > 1)
+		. += span_notice("Shift Left-click or right-click in-hand to increase or decrease its transfer amount.")
 
 /obj/item/reagent_containers/Destroy()
 	if(is_open_container())
@@ -203,6 +211,37 @@
 	if(list_reagents)
 		reagents.add_reagent_list(list_reagents)
 	update_appearance(UPDATE_OVERLAYS)
+
+/obj/item/reagent_containers/attack_self(mob/user, params)
+	. = ..()
+	if(has_variable_transfer_amount && LAZYACCESS(params2list(params), SHIFT_CLICKED))
+		change_transfer_amount(user, FORWARD)
+
+/obj/item/reagent_containers/attack_self_secondary(mob/user, params)
+	. = ..()
+	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
+		return
+	if(has_variable_transfer_amount && LAZYACCESS(params2list(params), SHIFT_CLICKED))
+		change_transfer_amount(user, BACKWARD)
+
+/obj/item/reagent_containers/proc/mode_change_message(mob/user)
+	return
+
+/obj/item/reagent_containers/proc/change_transfer_amount(mob/user, direction = FORWARD)
+	var/list_len = length(possible_transfer_amounts)
+	if(!list_len)
+		return
+	var/index = possible_transfer_amounts.Find(amount_per_transfer_from_this) || 1
+	switch(direction)
+		if(FORWARD)
+			index = (index % list_len) + 1
+		if(BACKWARD)
+			index = (index - 1) || list_len
+		else
+			CRASH("change_transfer_amount() called with invalid direction value")
+	amount_per_transfer_from_this = possible_transfer_amounts[index]
+	balloon_alert(user, "transferring [amount_per_transfer_from_this] [UNIT_FORM_STRING(amount_per_transfer_from_this)].")
+	mode_change_message(user)
 
 /obj/item/reagent_containers/proc/canconsume(mob/eater, mob/user, silent = FALSE)
 	if(!iscarbon(eater))

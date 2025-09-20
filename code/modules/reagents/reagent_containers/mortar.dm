@@ -19,23 +19,27 @@
 	volume = 100
 	reagent_flags = TRANSFERABLE | AMOUNT_VISIBLE
 	spillable = TRUE
-	var/obj/item/to_grind
 	grid_height = 32
 	grid_width = 64
 	dropshrink = 0.9
+	var/obj/item/to_grind
+
+/obj/item/reagent_containers/glass/mortar/Destroy()
+	if(!QDELETED(to_grind))
+		to_grind.forceMove(get_turf(src))
+	to_grind = null
+	return ..()
 
 /obj/item/reagent_containers/glass/mortar/attack_hand_secondary(mob/user, params)
-	. = ..()
-	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
-		return
+	if(!to_grind)
+		return ..()
+
 	user.changeNext_move(CLICK_CD_MELEE)
-	if(to_grind)
-		var/obj/item/N = to_grind
-		N.forceMove(get_turf(user))
-		to_chat(user, span_notice("I remove [to_grind] from the mortar."))
-		to_grind = null
-		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	to_chat(user, span_notice("It's empty."))
+
+	var/obj/item/N = to_grind
+	N.forceMove(get_turf(user))
+	to_grind = null
+	balloon_alert(user, "I remove \an [to_grind].")
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/reagent_containers/glass/mortar/attackby_secondary(obj/item/weapon, mob/user, params)

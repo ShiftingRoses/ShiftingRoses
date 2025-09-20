@@ -2672,10 +2672,10 @@
 /area/rogue/outdoors/bog)
 "pP" = (
 /obj/structure/rack/shelf/biggest,
-/obj/item/clothing/shoes/boots/rare/zybanplate,
-/obj/item/clothing/gloves/rare/zybanplate,
-/obj/item/clothing/armor/rare/zybanplate,
-/obj/item/clothing/head/rare/zybanplate,
+/obj/item/clothing/shoes/boots/rare/zaladplate,
+/obj/item/clothing/gloves/rare/zaladplate,
+/obj/item/clothing/armor/rare/zaladplate,
+/obj/item/clothing/head/rare/zaladplate,
 /turf/open/floor/twig,
 /area/rogue/indoors/mountains)
 "pT" = (
@@ -2889,7 +2889,7 @@
 /area/rogue/indoors/lich)
 "rs" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/item/clothing/neck/mercmedal/zybatine,
+/obj/item/clothing/neck/mercmedal/zaladian,
 /obj/effect/spawner/map_spawner/loot/common,
 /obj/effect/spawner/map_spawner/loot/common,
 /turf/open/floor/twig,

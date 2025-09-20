@@ -1,17 +1,17 @@
 /datum/book_entry/essence_crafting
-	name = "The Art of Thaumaturgical Essence Combination"
+	name = "Alchemical Combinations and You"
 
 /datum/book_entry/essence_crafting/inner_book_html(mob/user)
 	return {"
 		<div>
-		<h2>Understanding Thaumaturgical Essences</h2>
-		Essences are the fundamental building blocks of thaumaturgy. Each essence carries unique properties<br>
+		<h2>Understanding Alchemical Essences</h2>
+		Essences are the fundamental building blocks of alchemy. Each essence carries unique properties<br>
 		and can be combined with others to create more complex and powerful compounds.<br>
 		</div>
 		<br>
 		<div>
 		<h2>Basic Essences (Tier 0)</h2>
-		These are the foundation of all thaumaturgical work:<br>
+		These are the foundation of all alchemy:<br>
 		<br>
 		<b>Air Essence</b> - <i>Smells of fresh breeze</i><br>
 		<b>Water Essence</b> - <i>Smells of clear streams</i><br>
@@ -44,7 +44,7 @@
 		</div>
 		<br>
 		<div>
-		<h2>Thaumaturgical Equipment</h2>
+		<h2>Alchemical Equipment</h2>
 		[icon2html(new /obj/machinery/essence/splitter, user)]<br> <b>Essence Splitter:</b> Used to extract essences from raw materials.<br>
 		Add items to the splitter to break them down into their component essences.<br>
 		<br>
@@ -55,11 +55,11 @@
 		</div>
 		<br>
 		<div>
-		<h2>Using Thaumaturgical Equipment</h2>
-		[icon2html(new /obj/item/essence_connector, user)]<br> Connect other thaumaturgical devices using a thaumic connector for easier essence management.<br>
+		<h2>Using Alchemical Equipment</h2>
+		[icon2html(new /obj/item/essence_connector, user)]<br> Connect other achemical devices using a pestran connector for easier essence management.<br>
 		<br>
 		<b>Extracting Essences:</b> Place raw materials into the essence splitter and activate it.<br>
-		The splitter will break down items into their fundamental thaumaturgical essences.<br>
+		The splitter will break down items into alchemical essences.<br>
 		<br>
 		<b>Combining Essences:</b> Load the required essence vials into the combiner in the correct amounts.<br>
 		Once all required essences are loaded, activate the combiner to create compound essences.<br>

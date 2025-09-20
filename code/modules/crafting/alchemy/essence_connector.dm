@@ -1,6 +1,6 @@
 /obj/item/essence_connector
-	name = "thaumic connector"
-	desc = "A mystical linking device used to create essence flow connections between alchemical apparatus. Click and drag between devices to establish connections, or right-click to remove connections."
+	name = "Pestran Connector"
+	desc = "A oddly shaped object used to create connections between alchemical apparatus. Something under the metal squirms... Click and drag between devices to establish connections, or right-click to remove connections."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "connector"
 	w_class = WEIGHT_CLASS_SMALL
@@ -108,7 +108,7 @@
 
 /obj/effect/essence_orb
 	name = "essence orb"
-	desc = "A concentrated ball of thaumaturgical essence traveling between devices."
+	desc = "Alchemical essence in transit along a silver thread."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "phasein"
 	density = FALSE

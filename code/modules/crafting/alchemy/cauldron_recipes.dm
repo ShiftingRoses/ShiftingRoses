@@ -232,7 +232,7 @@
 	)
 
 /datum/alch_cauldron_recipe/mana_potion
-	recipe_name = "Arcane Elixir"
+	recipe_name = "Arcyne Elixir"
 	smells_like = "power"
 	output_reagents = list(/datum/reagent/medicine/manapot = 18)
 	required_essences = list(
@@ -241,7 +241,7 @@
 	)
 
 /datum/alch_cauldron_recipe/big_mana_potion
-	recipe_name = "Powerful Arcane Elixir"
+	recipe_name = "Powerful Arcyne Elixir"
 	smells_like = "fear"
 	output_reagents = list(/datum/reagent/medicine/manapot = 18, /datum/reagent/additive = 18)
 	required_essences = list(

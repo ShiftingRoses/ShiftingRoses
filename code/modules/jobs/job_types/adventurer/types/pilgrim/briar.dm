@@ -62,7 +62,6 @@
 		H.mind.teach_crafting_recipe(/datum/repeatable_crafting_recipe/dendor/sacrifice_devouring)
 		H.mind.teach_crafting_recipe(/datum/repeatable_crafting_recipe/dendor/sacrifice_lording)
 
-	ADD_TRAIT(H, TRAIT_HEAD_BUTCHER, TRAIT_GENERIC)
 	var/holder = H.patron?.devotion_holder
 	if(holder)
 		var/datum/devotion/devotion = new holder()

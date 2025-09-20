@@ -1,6 +1,6 @@
 /obj/machinery/essence/splitter
 	name = "essence splitter"
-	desc = "A complex alchemical device used to extract thaumaturgical essences from natural materials. Can process multiple items at once for efficiency."
+	desc = "A rather mundane machine used to extract alchemical essences from natural materials. Can process multiple items at once for efficiency."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "splitter"
 	density = TRUE

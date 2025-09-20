@@ -2,10 +2,10 @@
 	name = "Totod Order Emissary"
 	tutorial = "The Crusaders are knights who have pledged their wealth and lands to the Church, \
 	taking up the banner of the Totod Order dedicated to retaking Valoria. \
-	Three cults provide knights for the Order: Astrata, Necra and Psydon. \
+	Three cults provide knights for the Order: Astrata, Necra and Ravox. \
 	You were sent to Vanderlin by the Order to get any and all assistance from the faithful for the Crusade."
 	allowed_races = RACES_PLAYER_NONHERETICAL
-	allowed_patrons = list(/datum/patron/divine/astrata, /datum/patron/divine/necra, /datum/patron/psydon)
+	allowed_patrons = list(/datum/patron/divine/astrata, /datum/patron/divine/necra, /datum/patron/divine/ravox)
 	outfit = /datum/outfit/job/adventurer/crusader
 	category_tags = list(CTAG_ADVENTURER)
 	maximum_possible_slots = 1
@@ -14,7 +14,7 @@
 	is_recognized = TRUE
 
 /datum/outfit/job/adventurer/crusader
-	allowed_patrons = list(/datum/patron/divine/astrata, /datum/patron/divine/necra, /datum/patron/psydon)
+	allowed_patrons = list(/datum/patron/divine/astrata, /datum/patron/divine/necra, /datum/patron/divine/ravox)
 
 /datum/outfit/job/adventurer/crusader/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -34,23 +34,16 @@
 	switch(H.patron?.name)
 		if("Astrata")
 			H.cmode_music = 'sound/music/cmode/church/CombatAstrata.ogg'
-			cloak = /obj/item/clothing/cloak/stabard/crusader // Gold for Astrata regardless of gender
+			cloak = /obj/item/clothing/cloak/stabard/templar/astrata // Gold for Astrata regardless of gender
 			wrists = /obj/item/clothing/neck/psycross/silver/astrata
 		if("Necra")
 			H.cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
 			cloak = /obj/item/clothing/cloak/stabard/templar/necra
 			wrists = /obj/item/clothing/neck/psycross/silver/necra
-		if("Psydon")
-			H.cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
-			wrists = /obj/item/clothing/neck/psycross/silver
-			if(H.gender == FEMALE) // Silver for female, gold for male
-				cloak = /obj/item/clothing/cloak/stabard/crusader/t
-			else
-				cloak = /obj/item/clothing/cloak/stabard/crusader
 		else // Failsafe
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatIntense.ogg'
-			cloak = /obj/item/clothing/cloak/stabard/crusader // Gold version regardless of gender or patron
-			wrists = /obj/item/clothing/neck/psycross/silver
+			cloak = /obj/item/clothing/cloak/stabard/templar/ravox // Gold version regardless of gender or patron
+			wrists = /obj/item/clothing/neck/psycross/silver/ravox
 
 	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -95,7 +88,8 @@
 		H.grant_language(/datum/language/oldpsydonic)
 		to_chat(H, "<span class='info'>I can speak Old Psydonic with ,m before my speech.</span>")
 
-	if(H.job == "Crusader") // If they come through the crusader_wave, they are from Grenzelhoft.
+	var/job = H.get_role_title()
+	if(job == "Crusader") // If they come through the crusader_wave, they are from Grenzelhoft.
 		if(H.dna?.species.id == SPEC_ID_HUMEN)
 			H.dna.species.native_language = "Old Psydonic"
 			H.dna.species.accent_language = H.dna.species.get_accent(H.dna.species.native_language)

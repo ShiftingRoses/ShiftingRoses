@@ -1,7 +1,7 @@
 
 /obj/item/clothing/gloves/essence_gauntlet
 	name = "essence gauntlet"
-	desc = "A mystical gauntlet that can store thaumaturgical essences and channel them into minor utility spells. Advanced combinations can unlock powerful effects."
+	desc = "A  gauntlet that can store alchemical essences and channel them into alchemical spells. Advanced combinations can unlock powerful effects."
 	icon_state = "essence_gauntlet"
 	var/list/obj/item/essence_vial/stored_vials = list()
 	var/max_vials = 4

@@ -74,7 +74,7 @@
 
 /obj/item/clothing/shoes/simpleshoes/colored/lord
 	name = "shoes"
-	desc = "Shoes typically worn by the King himself."
+	desc = "Shoes typically worn by the Monarch themselves."
 	gender = PLURAL
 	icon_state = "simpleshoe"
 	item_state = "simpleshoe"
@@ -112,15 +112,15 @@
 
 /obj/item/clothing/shoes/shalal
 	name = "babouche"
-	desc = "Leather slippers of Zaladin origin."
+	desc = "Leather slippers of Zaladian origin."
 	gender = PLURAL
 	icon_state = "shalal"
 	item_state = "shalal"
 	sellprice = 15
 
 /obj/item/clothing/shoes/tribal
-	name = "tribal shoes"
-	desc = "Haphazardly-made slippers of creecher leather worn by primitives, or those who don't care about fashion and just want to protect their feet."
+	name = "primative shoes"
+	desc = "Haphazardly-made slippers of creecher leather worn by those with nothing better, or those who don't care about fashion and just want to protect their feet."
 	icon_state = "tribalshoes"
 	item_state = "tribalshoes"
 	sellprice = 3

@@ -101,19 +101,7 @@
 
 /datum/coven_power/demonic/conflagration/post_gain()
 	. = ..()
-	var/datum/action/cooldown/spell/projectile/fireball/baali/balefire = new(owner)
-	balefire.Grant(owner)
-
-/datum/action/cooldown/spell/projectile/fireball/baali
-	name = "Infernal Fireball"
-	desc = "This spell fires an explosive fireball at a target."
-	school = "evocation"
-	charge_time = 4 SECONDS
-	invocation = "FR BRTH"
-	invocation_type = "whisper"
-	cooldown_time = 20 //10 deciseconds reduction per rank
-	projectile_type = /obj/projectile/magic/aoe/fireball/rogue
-	sound = 'sound/magic/fireball.ogg'
+	owner.add_spell(/datum/action/cooldown/spell/projectile/fireball/baali, source = src)
 
 //PSYCHOMACHIA
 /datum/coven_power/demonic/psychomachia

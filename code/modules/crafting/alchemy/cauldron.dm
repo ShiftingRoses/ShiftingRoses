@@ -1,6 +1,6 @@
 /obj/machinery/light/fueled/cauldron
 	name = "cauldron"
-	desc = "Bubble, Bubble, toil and trouble. A great iron cauldron for brewing potions from thaumaturgical essences."
+	desc = "Bubble, Bubble, toil and trouble. A great iron cauldron for brewing potions from alchemical essences."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "cauldron1"
 	base_state = "cauldron"
