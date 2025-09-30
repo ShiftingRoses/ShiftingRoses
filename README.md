@@ -1,15 +1,3 @@
-# NOCTRA
-
-[![BYOND Build](https://github.com/Monkestation/Vanderlin/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/Monkestation/Vanderlin/actions/workflows/ci_suite.yml)
-
-| Website                   | Link                                           |
-|---------------------------|------------------------------------------------|
-| Discord    | [https://discord.gg/99tqMbqfDt](https://discord.gg/99tqMbqfDt) |
-| Code    | [https://github.com/Monkestation/Noctra/](https://github.com/Monkestation/Noctra/) |
-| Website    | [https://noctragame.com](https://noctragame.com) |
-| Vanderlin Discord | [https://discord.monkestation.com](https://discord.monkestation.com) |
-| Vanderlin Code    | [https://github.com/Monkestation/Vanderlin](https://github.com/Monkestation/Vanderlin)    |
-
 ## LICENSE
 Original Fork Originates from [commit c28b351807bad950d2b323ada048190844bbda32](https://github.com/tgstation/tgstation/commit/c28b351807bad950d2b323ada048190844bbda32).
 
@@ -25,3 +13,6 @@ The TGS DMAPI is licensed as a subproject under the MIT license.
 See the footer of [code/__DEFINES/tgs.dm](./code/__DEFINES/tgs.dm) and [code/modules/tgs/LICENSE](./code/modules/tgs/LICENSE) for the MIT license.
 
 All assets including icons and sound are under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
+
+Any contributions made are to be cited in the event they are a "port" from another codebase. Pull requests may not be made to remove content made by contributors as an act of protest. By contributing you agree to this agreement.
+
