@@ -14,5 +14,5 @@ See the footer of [code/__DEFINES/tgs.dm](./code/__DEFINES/tgs.dm) and [code/mod
 
 All assets including icons and sound are under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
 
-Any contributions made are to be cited in the event they are a "port" from another codebase. Pull requests may not be made to remove content made by contributors as an act of protest. By contributing you agree to this agreement.
-
+by submitting new lore contributions you grant an irrevocable, perpetual license to use and modify said contributions.
+No All Rights Reserved licensing, all licenses for new assets must be perpetual and irrevocable.
