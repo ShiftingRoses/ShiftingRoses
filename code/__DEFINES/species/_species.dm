@@ -32,8 +32,6 @@
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
-	SPEC_ID_TRITON,\
-	SPEC_ID_MEDICATOR,\
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
@@ -103,7 +101,15 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
-	SPEC_ID_HOLLOWKIN, \
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
 )
 
 /// Species who are nonheretical to the church. Excluded species typically have an inhumen god associated, like Zizo. Used for church/faith roles.
@@ -113,9 +119,14 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
 	SPEC_ID_TRITON,\
 	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 )
 
@@ -130,17 +141,16 @@
 	SPEC_ID_HALF_DROW,\
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
 	SPEC_ID_TRITON,\
 	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
 )
 
 /// Species that lack lux. Any who have no ties to divinity anymore, whether it be their creation story or otherwise taken from them (Hollow-kin)
 #define RACES_PLAYER_LUXLESS list(\
-	SPEC_ID_KOBOLD,\
-	SPEC_ID_HOLLOWKIN,\
-	SPEC_ID_RAKSHARI,\
 	SPEC_ID_HUMAN_SPACE,\
 )
 
@@ -186,27 +196,42 @@
 	SPEC_ID_HOLLOWKIN,\
 )
 
-/// Guard Species - No Orcs or Dark Elf
+/// Guard Species - Everything
 #define RACES_PLAYER_GUARD list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
 	SPEC_ID_HALF_DROW,\
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
 	SPEC_ID_TRITON,\
 	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
-/// Vanderlin royalty
+/// Local upper-classmen
 #define RACES_PLAYER_ROYALTY list(\
 	SPEC_ID_HUMEN,\
-	SPEC_ID_HALF_ELF,\
-	SPEC_ID_ELF,\
 	SPEC_ID_DWARF,\
+	SPEC_ID_AASIMAR,\
+	SPEC_ID_ELF,\
+	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 #define RACES_PLAYER_COURT_PHYSICIAN list(\
@@ -215,10 +240,19 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_TRITON,\
 	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
-/// Foreigner Nobility Species - No Tiefling (you know why) or hollow-kin or medicators (too young to have nobles mayhaps)
+/// Foreigner Nobility Species -  Everything
 #define RACES_PLAYER_FOREIGNNOBLE list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\
@@ -227,11 +261,14 @@
 	SPEC_ID_HALF_ELF,\
 	SPEC_ID_DROW,\
 	SPEC_ID_HALF_DROW,\
-	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
 	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
 	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Nonnative species - Anything not native to Psydonia.
@@ -240,15 +277,12 @@
 	SPEC_ID_HUMAN_SPACE,\
 )
 
-/// Species who are heretical to the church.
+/// Species who are heretical to the church. Generic evil aligned species, might need a change.
 #define RACES_PLAYER_HERETICAL_RACE list(\
 	SPEC_ID_DROW,\
 	SPEC_ID_HALF_DROW,\
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HALF_ORC,\
-	SPEC_ID_KOBOLD,\
-	SPEC_ID_RAKSHARI,\
-	SPEC_ID_HOLLOWKIN,\
 )
 
 /// Species that use the base human body, adjusted or otherwise

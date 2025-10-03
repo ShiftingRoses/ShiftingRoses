@@ -9,6 +9,7 @@
 		SPEC_ID_TIEFLING,\
 		SPEC_ID_DROW,\
 		SPEC_ID_HALF_DROW,\
+		SPEC_ID_HOLLOWKIN,\
 	)
 	outfit = /datum/outfit/job/adventurer/qatil
 	maximum_possible_slots = 1

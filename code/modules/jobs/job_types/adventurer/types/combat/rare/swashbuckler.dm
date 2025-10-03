@@ -11,6 +11,7 @@
 		SPEC_ID_AASIMAR,\
 		SPEC_ID_HALF_ORC,\
 		SPEC_ID_RAKSHARI,\
+		SPEC_ID_HOLLOWKIN,\
 	)
 	outfit = /datum/outfit/job/adventurer/swashbuckler
 	maximum_possible_slots = 1

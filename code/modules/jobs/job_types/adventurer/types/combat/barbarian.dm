@@ -7,6 +7,7 @@
 		SPEC_ID_DWARF,\
 		SPEC_ID_HALF_ORC,\
 		SPEC_ID_TIEFLING,\
+		SPEC_ID_HOLLOWKIN,\
 	)
 	outfit = /datum/outfit/job/adventurer/barbarian
 	min_pq = 0
