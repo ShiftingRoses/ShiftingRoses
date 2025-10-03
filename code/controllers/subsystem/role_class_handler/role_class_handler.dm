@@ -81,8 +81,8 @@ SUBSYSTEM_DEF(role_class_handler)
 	if(!H)
 		CRASH("setup_class_handler was called without a passed mob in args!")
 
-	if(H.client.has_triumph_buy(TRIUMPH_BUY_ANY_CLASS))
-		H.client.activate_triumph_buy(TRIUMPH_BUY_ANY_CLASS)
+/*	if(H.client.has_triumph_buy(TRIUMPH_BUY_ANY_CLASS))
+		H.client.activate_triumph_buy(TRIUMPH_BUY_ANY_CLASS) */
 
 	// insure they somehow aren't closing the datum they got and opening a new one w rolls
 	var/datum/class_select_handler/GOT_IT = class_select_handlers[H.client.ckey]

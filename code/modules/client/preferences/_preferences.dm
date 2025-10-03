@@ -585,10 +585,10 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			if(length(job.allowed_ages) && !(user.client.prefs.age in job.allowed_ages))
 				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
 				continue
-			if(length(job.allowed_races) && !(user.client.prefs.pref_species.id in job.allowed_races))
+			/*if(length(job.allowed_races) && !(user.client.prefs.pref_species.id in job.allowed_races))
 				if(!(user.client.has_triumph_buy(TRIUMPH_BUY_RACE_ALL)))
 					HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
-					continue
+					continue */
 			if(length(job.allowed_patrons) && !(user.client.prefs.selected_patron.type in job.allowed_patrons))
 				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
 				continue

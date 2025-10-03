@@ -281,14 +281,14 @@ SUBSYSTEM_DEF(job)
 					continue
 
 				var/list/player_boosts = get_player_boosts(player)
-
+/*
 				if(length(job.allowed_races) && !(player.client.prefs.pref_species.id in job.allowed_races))
 					if(!player.client?.has_triumph_buy(TRIUMPH_BUY_RACE_ALL))
 						JobDebug("DO incompatible with species, Player: [player], Job: [job.title], Race: [player.client.prefs.pref_species.name]")
 						continue
 					else
 						player.client?.activate_triumph_buy(TRIUMPH_BUY_RACE_ALL)
-
+*/
 				if(length(job.allowed_patrons) && !(player.client.prefs.selected_patron.type in job.allowed_patrons))
 					JobDebug("DO incompatible with patron, Player: [player], Job: [job.title], Race: [player.client.prefs.pref_species.name]")
 					continue
@@ -668,7 +668,7 @@ SUBSYSTEM_DEF(job)
 		JobDebug("Popcap overflow Check observer located, Player: [player]")
 	JobDebug("Player rejected :[player]")
 	to_chat(player, "<b>I couldn't find a job to be..</b>")
-
+/*
 	var/list/client_triumphs = SStriumphs.triumph_buy_owners[player.ckey]
 	if(islist(client_triumphs))
 		for(var/datum/triumph_buy/race_all_jobs/R in client_triumphs)
@@ -676,7 +676,7 @@ SUBSYSTEM_DEF(job)
 
 	unassigned -= player
 	player.ready = PLAYER_NOT_READY
-
+*/
 
 /datum/controller/subsystem/job/Recover()
 	set waitfor = FALSE
