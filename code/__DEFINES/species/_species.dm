@@ -89,8 +89,6 @@
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
-	SPEC_ID_TRITON,\
-	SPEC_ID_MEDICATOR,\
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
@@ -103,7 +101,14 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
-	SPEC_ID_HOLLOWKIN, \
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Species who are nonheretical to the church. Excluded species typically have an inhumen god associated, like Zizo. Used for church/faith roles.
@@ -113,10 +118,14 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
-	SPEC_ID_TRITON,\
-	SPEC_ID_MEDICATOR,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Species who are non-exotic to Vanderlin. These are species from foreign lands with no local pull or uncommon species. Used in miscellaneous cases, when they would not be that role.
@@ -130,17 +139,14 @@
 	SPEC_ID_HALF_DROW,\
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
-	SPEC_ID_TRITON,\
-	SPEC_ID_MEDICATOR,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
 )
 
 /// Species that lack lux. Any who have no ties to divinity anymore, whether it be their creation story or otherwise taken from them (Hollow-kin)
 #define RACES_PLAYER_LUXLESS list(\
-	SPEC_ID_KOBOLD,\
-	SPEC_ID_HOLLOWKIN,\
-	SPEC_ID_RAKSHARI,\
 	SPEC_ID_HUMAN_SPACE,\
 )
 
@@ -182,8 +188,7 @@
 
 /// Patreon only species.
 #define RACES_PLAYER_PATREON list(\
-	SPEC_ID_KOBOLD,\
-	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HUMAN_SPACE,\
 )
 
 /// Guard Species - No Orcs or Dark Elf
@@ -193,20 +198,31 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
 	SPEC_ID_HALF_DROW,\
 	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
-	SPEC_ID_TRITON,\
-	SPEC_ID_MEDICATOR,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Vanderlin royalty
 #define RACES_PLAYER_ROYALTY list(\
 	SPEC_ID_HUMEN,\
-	SPEC_ID_HALF_ELF,\
-	SPEC_ID_ELF,\
 	SPEC_ID_DWARF,\
+	SPEC_ID_AASIMAR,\
+	SPEC_ID_ELF,\
+	SPEC_ID_HALF_ELF,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 #define RACES_PLAYER_COURT_PHYSICIAN list(\
@@ -215,7 +231,14 @@
 	SPEC_ID_AASIMAR,\
 	SPEC_ID_ELF,\
 	SPEC_ID_HALF_ELF,\
-	SPEC_ID_MEDICATOR,\
+	SPEC_ID_DROW,\
+	SPEC_ID_HALF_DROW,\
+	SPEC_ID_TIEFLING,\
+	SPEC_ID_HARPY,\
+	SPEC_ID_RAKSHARI,\
+	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Foreigner Nobility Species - No Tiefling (you know why) or hollow-kin or medicators (too young to have nobles mayhaps)
@@ -227,11 +250,12 @@
 	SPEC_ID_HALF_ELF,\
 	SPEC_ID_DROW,\
 	SPEC_ID_HALF_DROW,\
-	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TIEFLING,\
 	SPEC_ID_HARPY,\
 	SPEC_ID_RAKSHARI,\
-	SPEC_ID_TRITON,\
 	SPEC_ID_KOBOLD,\
+	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_HALF_ORC,\
 )
 
 /// Nonnative species - Anything not native to Psydonia.

@@ -1,8 +1,8 @@
 /datum/triumph_buy/pick_any_class
 	name = "No Advanced Class Restrictions"
-	desc = "Get a single run of any advanced class from any job! You must join as any job that has advanced classes to begin with. WARNING: PREPARE FOR UNFORESEEN CONSEQUENCES."
+	desc = "NOTICE: THIS IS DEFUNCT. DO NOT WORRY ABOUT THIS; CLASS AND GENDER RESTRICTIONS DO NOT EXIST. THIS REMAINS TILL WE CAN SAFELY RIP IT OUT OF THE CODEBASE."
 	triumph_buy_id = TRIUMPH_BUY_ANY_CLASS
-	triumph_cost = 20
+	triumph_cost = 999
 	category = TRIUMPH_CAT_CHARACTER
 	visible_on_active_menu = TRUE
 	manual_activation = TRUE
