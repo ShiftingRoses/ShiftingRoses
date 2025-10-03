@@ -1,4 +1,4 @@
-/datum/triumph_buy/pick_any_class
+/* /datum/triumph_buy/pick_any_class
 	name = "No Advanced Class Restrictions"
 	desc = "Get a single run of any advanced class from any job! You must join as any job that has advanced classes to begin with. WARNING: PREPARE FOR UNFORESEEN CONSEQUENCES."
 	triumph_buy_id = TRIUMPH_BUY_ANY_CLASS
@@ -49,3 +49,4 @@
 	if(!C)
 		C = pick(possible_classes)
 	C.equipme(H)
+/*

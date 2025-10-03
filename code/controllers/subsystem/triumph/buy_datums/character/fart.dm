@@ -1,4 +1,4 @@
-/datum/triumph_buy/fart
+/* /datum/triumph_buy/fart
 	name = "Fart Ability"
 	desc = "Gain an ability to loudly fart to everyone around you!"
 	triumph_buy_id = TRIUMPH_BUY_FART
@@ -13,3 +13,4 @@
 	. = ..()
 	H.add_spell(/datum/action/cooldown/spell/undirected/fart)
 	on_activate()
+*/
