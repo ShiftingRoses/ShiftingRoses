@@ -765,7 +765,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 /datum/charflaw/lux_taken
 	name = "Lux-less"
 	desc = "Through some grand misfortune, or heroic sacrifice- you have given up your link to Psydon, and with it- your soul. A putrid, horrid thing, you cosign yourself to an eternity of nil after death. Perhaps you are fine with this. \
-	\n\n EXPECT A DIFFICULT, MECHANICALLY UNFAIR EXPERIENCE. \n Rakshari, Hollowkin and Kobolds do not apply, given they already have no lux. "
+	\n\n EXPECT A DIFFICULT, MECHANICALLY UNFAIR EXPERIENCE."
 
 /datum/charflaw/lux_taken/after_spawn(mob/user)
 	if(!ishuman(user))
