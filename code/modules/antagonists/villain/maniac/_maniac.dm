@@ -372,8 +372,8 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/fail.ogg', 100, FALSE, pressure_affected = FALSE)
 
 /obj/structure/maniac_return_machine
-	name = "Vanderlin Program"
-	desc = "The Vanderlin Program was created by ██████████ in the year ████, allowing humans to explore hostile worlds and environments through remote-controlled bodies without danger to the user's life."
+	name = "Unknown Device"
+	desc = "The device was created by ██████████ in the year ████, allowing humans to explore hostile worlds and environments through remote-controlled bodies without danger to the user's life."
 	icon_state = "pylon"
 	icon = 'icons/roguetown/misc/mana_pylon.dmi'
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

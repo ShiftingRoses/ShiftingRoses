@@ -824,7 +824,7 @@
 	var/random_message = pick(
 	"You spin the globe!",
 	"You land on Rockhill!",
-	"You land on Vanderlin!",
+	"You land on The Island!",
 	"You land on Heartfelt!",
 	"You land on Zaladin!",
 	"You land on Grenzelhoft!",

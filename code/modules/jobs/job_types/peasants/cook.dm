@@ -1,7 +1,7 @@
 /datum/job/cook
 	title = "Cook"
 	tutorial = "Slice, chop, and into the pot... \
-	you work closely with the innkeep to prepare meals for all the hungry mouths of Vanderlin. \
+	you work closely with the innkeep to prepare meals for all the hungry mouths of the Island. \
 	You've spent more nites than you can count cutting meat and vegetables until your fingers are bloody and raw, but it's honest work."
 	department_flag = PEASANTS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)

@@ -102,7 +102,7 @@ SUBSYSTEM_DEF(ticker)
 		"Still no Ruler is readied..",
 		"I'm going to lose my mind if we don't get a Ruler readied up.",
 		"No. The game will not start because there is no Ruler.",
-		"What's the point of Vanderlin without a Ruler?"
+		"What's the point of the nobility without a Ruler?"
 		)
 
 /datum/controller/subsystem/ticker/Initialize(timeofday)

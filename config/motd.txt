@@ -1,4 +1,4 @@
 <!-- Most valid html will work in here, excluding images. -->
-<center>Vanderlin/Monkestation Discord Server: <a href="https://discord.monkestation.com">https://discord.monkestation.com</a></center>
+<center>Shifting Roses Discord Server: <a href="https://discord.gg/3SuhafZZvf">https://discord.gg/3SuhafZZvf</a></center>
 <center>* TECHNICAL DISPLAY PLAYTEST *</center>
-<!-- We're no longer so unstable, also it's shit advertising. -->
+<!-- Welcome to Shifting Roses! A highly modified Stonekeep/Vanderlin Fork. If you see any issues, make a post on the Discord!-->
