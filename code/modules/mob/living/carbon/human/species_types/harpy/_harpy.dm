@@ -71,8 +71,8 @@
 
 	inherent_traits = list(TRAIT_HOLLOWBONES, TRAIT_AMAZING_BACK, TRAIT_DODGEEXPERT)
 
-	specstats_m = list(STATKEY_STR = -4, STATKEY_PER = 2, STATKEY_INT = 1, STATKEY_CON = -4, STATKEY_END = 0, STATKEY_SPD = 3, STATKEY_LCK = 0)
-	specstats_f = list(STATKEY_STR = -4, STATKEY_PER = 2, STATKEY_INT = 1, STATKEY_CON = -4, STATKEY_END = 0, STATKEY_SPD = 3, STATKEY_LCK = 0)
+	specstats_m = list(STATKEY_STR = 0, STATKEY_PER = 1, STATKEY_INT = 1, STATKEY_CON = -2, STATKEY_END = 0, STATKEY_SPD = 1, STATKEY_LCK = 0)
+	specstats_f = list(STATKEY_STR = 0, STATKEY_PER = 1, STATKEY_INT = 1, STATKEY_CON = -2, STATKEY_END = 0, STATKEY_SPD = 1, STATKEY_LCK = 0) // they get flight, this could be nuts, so they get hollowbones and a con debuff
 
 	enflamed_icon = "widefire"
 
