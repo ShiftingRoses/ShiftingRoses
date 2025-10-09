@@ -98,8 +98,8 @@
 		OFFSET_VAGINA = list(0,-4),\
 	)
 
-	specstats_m = list(STATKEY_STR = 2, STATKEY_PER = 0, STATKEY_INT = 0, STATKEY_CON = 2, STATKEY_END = 2, STATKEY_SPD = -2, STATKEY_LCK = 0)
-	specstats_f = list(STATKEY_STR = 2, STATKEY_PER = 0, STATKEY_INT = 0, STATKEY_CON = 2, STATKEY_END = 2, STATKEY_SPD = -2, STATKEY_LCK = 0) // rare exception to the 3 stat rule
+	specstats_m = list(STATKEY_STR = 1, STATKEY_PER = 1, STATKEY_INT = 0, STATKEY_CON = 1, STATKEY_END = 0, STATKEY_SPD = 0, STATKEY_LCK = 0)
+	specstats_f = list(STATKEY_STR = 1, STATKEY_PER = 1, STATKEY_INT = 0, STATKEY_CON = 1, STATKEY_END = 0, STATKEY_SPD = 0, STATKEY_LCK = 0)
 
 	enflamed_icon = "widefire"
 
