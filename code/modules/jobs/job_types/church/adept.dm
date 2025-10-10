@@ -1,6 +1,6 @@
 /datum/job/adept
 	title = "Adept"
-	tutorial = "You were a convicted criminal, the lowest scum of Vanderlin. \
+	tutorial = "You were a convicted criminal, the lowest scum of the Island. \
 	Your master, the Inquisitor, saved you from the gallows \
 	and has given you true purpose in service to Psydon. \
 	You will not let him down."

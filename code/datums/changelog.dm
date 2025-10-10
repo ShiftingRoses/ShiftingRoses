@@ -31,7 +31,7 @@
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 	<html>
 	<head>
-		<title>Vanderlin Changelog</title>
+		<title>Shifting Roses Changelog</title>
 		<link rel="stylesheet" type="text/css" href="[SSassets.transport.get_asset_url("changelog.css")]">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
@@ -41,10 +41,10 @@
 	<table align='center' class="top">
 		<tr>
 			<td valign='top'>
-				<div align='center'><font size='3'><b>Vanderlin</b></font></div>
+				<div align='center'><font size='3'><b>Shifting Roses</b></font></div>
 
-				<p><div align='center'><a href="https://mediawiki.monkestation.com">Wiki</a> | <a href="https://github.com/monkestation/vanderlin">Source Code</a></font></div></p>
-				<font size='2'><b>Join our <a href="https://discord.gg/monkestation">Discord channel</a></b></font>
+				<p><div align='center'><a href="https://mediawiki.monkestation.com">Wiki</a> | <a href="https://github.com/ShiftingRoses/ShiftingRoses">Source Code</a></font></div></p>
+				<font size='2'><b>Join our <a href="https://discord.gg/3SuhafZZvf">Discord channel</a></b></font>
 				</td>
 		</tr>
 	</table>
@@ -53,7 +53,7 @@
 		<tr>
 			<td valign='top'>
 				<font size='2'><b>Thanks to:</b> Baystation 12, /vg/station, NTstation, CDK Station devs, FacepunchStation, GoonStation devs, the original Space Station 13 developers, Invisty for the title image and the countless others who have contributed to the game, issue tracker or wiki over the years.</font>
-				<font size='2' color='red'><b><br>Have a bug to report?</b> Visit our <a href="https://github.com/Monkestation/Vanderlin/issues">Issue Tracker</a>.<br></font>
+				<font size='2' color='red'><b><br>Have a bug to report?</b> Visit our <a href="https://github.com/ShiftingRoses/ShiftingRoses/issues">Issue Tracker</a>.<br></font>
 				<font size='2'>Please search first to ensure that the bug has not already been reported.</font>
 			</td>
 		</tr>
@@ -85,7 +85,7 @@
 						<a href="https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8">TG station commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST</a> \
 						is licenced under <a href="https://www.gnu.org/licenses/agpl-3.0.html>GNU AGPL v3</a>. \
 						All code after that commit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>, \
-						including tools unless their readme specifies otherwise, see <a href="https://github.com/Monkestation/Vanderlin/blob/main/LICENSE">LICENSE</a>.
+						including tools unless their readme specifies otherwise, see <a href="https://github.com/ShiftingRoses/ShiftingRoses/blob/main/LICENSE">LICENSE</a>.
 					</p>
 					<p>
 						Rogue Town was orginally forked from \

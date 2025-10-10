@@ -94,7 +94,7 @@
 	SPEC_ID_HALF_ORC,\
 )
 
-/// Species not considered discriminated against in Vanderlin. Used for nobility, etc.
+/// Species not considered discriminated against in locally. Used for nobility, etc.
 #define RACES_PLAYER_NONDISCRIMINATED list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\
@@ -208,7 +208,7 @@
 	SPEC_ID_HALF_ORC,\
 )
 
-/// Vanderlin royalty
+/// Local royalty, this should not be changed.
 #define RACES_PLAYER_ROYALTY list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\
@@ -241,7 +241,7 @@
 	SPEC_ID_HALF_ORC,\
 )
 
-/// Foreigner Nobility Species - No Tiefling (you know why) or hollow-kin or medicators (too young to have nobles mayhaps)
+/// Foreigner Nobility Species -  this should not be changed.
 #define RACES_PLAYER_FOREIGNNOBLE list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\
@@ -258,7 +258,7 @@
 	SPEC_ID_HALF_ORC,\
 )
 
-/// Nonnative species - Anything not native to Psydonia.
+/// Nonnative species - Anything not native to the world.
 /// Probably only will ever contain humans pragmatically, as funny as ethereals pretending to be tieflings would be.
 #define RACES_PLAYER_ALIEN list(\
 	SPEC_ID_HUMAN_SPACE,\

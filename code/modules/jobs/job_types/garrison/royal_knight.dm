@@ -130,7 +130,7 @@
 
 /datum/advclass/royalknight/steam
 	name = "Steam Knight"
-	tutorial = "The pinnacle of Vanderlin's steam technology. \
+	tutorial = "The pinnacle of the Islands's steam technology. \
 	Start with a set of Steam Armor that requires steam to function. \
 	The suit is powerful when powered but will slow you down when not \
 	learning how to use it has cost you precious time \

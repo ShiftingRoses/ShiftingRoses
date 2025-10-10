@@ -254,7 +254,7 @@
 	set name = "Anonymize"
 
 	if(prefs.anonymize == TRUE)
-		if(alert(src, "Disable Anonymize? (Not Recommended)", "NOCTRA", "YES", "NO") == "YES")
+		if(alert(src, "Disable Anonymize? (Not Recommended)", "SHIFTING ROSES", "YES", "NO") == "YES")
 			prefs.anonymize = FALSE
 			prefs.save_preferences()
 			to_chat(src, "No longer anonymous.")
@@ -262,7 +262,7 @@
 	else
 		if(alert(src, "Enable Anonymize? This will hide your BYOND name from anyone except \
 		Dungeon Masters while playing here, useful for dealing with negative OOC bias or \
-		maintaining privacy from other BYOND users.", "NOCTRA", "YES", "NO") == "YES")
+		maintaining privacy from other BYOND users.", "SHIFTING ROSES", "YES", "NO") == "YES")
 			prefs.anonymize = TRUE
 			prefs.save_preferences()
 			to_chat(src, "Anonymous... OK")
@@ -324,6 +324,6 @@
 	var/list/dat = list()
 	dat += GLOB.roleplay_readme
 	if(dat)
-		var/datum/browser/popup = new(usr, "Primer", "VANDERLIN/NOCTRA", 650, 900)
+		var/datum/browser/popup = new(usr, "Primer", "SHIFTING ROSES", 650, 900)
 		popup.set_content(dat.Join())
 		popup.open()

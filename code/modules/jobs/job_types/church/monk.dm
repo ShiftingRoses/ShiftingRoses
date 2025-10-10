@@ -1,7 +1,7 @@
 /datum/job/monk
 	title = "Acolyte"
 	tutorial = "Chores, exercise, prayer... and more chores. \
-	You are a humble acolyte at the temple in Vanderlin, \
+	You are a humble acolyte at the temple in The Island, \
 	not yet a trained guardian or an ordained priest. \
 	But who else would keep the fires lit and the floors clean?"
 	department_flag = CHURCHMEN
