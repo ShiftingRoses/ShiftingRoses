@@ -399,11 +399,18 @@ GLOBAL_PROTECT(tracy_init_reason)
 
 /world/proc/update_status()
 	var/s = ""
-	s += "<center><a href=\"https://discord.gg/zNAGFDcQ\">"
-	s += "<big><b>Vanderlin - Now 24/7 (Hosted by Monkestation)</b></big></a><br>"
-	s += "<b>Dark Medieval Fantasy Roleplay<b><br>"
+	var/server_name = CONFIG_GET(string/servername)
+	var/server_subtitle = CONFIG_GET(string/serversubtitle)
+	var/hosted_by = CONFIG_GET(string/hostedby)
+
+	s += "<center><big><b>[server_name ? server_name : "Shifting Roses Team"]"
+	if (hosted_by)
+		s += " (Hosted by [hosted_by])"
+	s += "</b></big><br>"
+	if (server_subtitle)
+		s += "<b>[server_subtitle]</b><br>"
 	s += "\["
-	if(SSticker.current_state <= GAME_STATE_PREGAME)
+	if (SSticker.current_state <= GAME_STATE_PREGAME)
 		s += "<b>GAME STATUS:</b> IN LOBBY"
 	else
 		s += "<b>GAME STATUS:</b> PLAYING"
