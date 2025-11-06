@@ -1280,14 +1280,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 								try_update_anthro_colors()
 
 				if("selected_accent")
-					if(length(pref_species.multiple_accents))
-						change_accent = TRUE
-					else
-						change_accent = FALSE
-					if(!patreon && !change_accent)
-						to_chat(user, "Sorry, this option is Patreon-exclusive or unavailable to your race.")
-						selected_accent = ACCENT_DEFAULT
-						return
 					var/accent
 					if(patreon)
 						accent = browser_input_list(user, "CHOOSE YOUR HERO'S ACCENT", "VOICE OF THE WORLD", GLOB.accent_list, selected_accent)
