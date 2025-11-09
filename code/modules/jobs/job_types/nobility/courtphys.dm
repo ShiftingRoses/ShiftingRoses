@@ -11,7 +11,7 @@
 	spawn_positions = 1
 	min_pq = 0
 
-	allowed_races = RACES_PLAYER_COURT_PHYSICIAN
+	allowed_races = RACES_PLAYER_ALL
 
 	outfit = /datum/outfit/job/courtphys
 	give_bank_account = 100

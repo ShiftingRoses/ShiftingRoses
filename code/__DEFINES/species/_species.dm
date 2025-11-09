@@ -92,6 +92,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
 )
 
 /// Species not considered discriminated against in locally. Used for nobility, etc.
@@ -109,6 +111,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
 )
 
 /// Species who are nonheretical to the church. Excluded species typically have an inhumen god associated, like Zizo. Used for church/faith roles.
@@ -126,6 +130,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
 )
 
 /// Species who are non-exotic to Vanderlin. These are species from foreign lands with no local pull or uncommon species. Used in miscellaneous cases, when they would not be that role.
@@ -143,6 +149,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_TRITON,\
+	SPEC_ID_MEDICATOR,\
 )
 
 /// Species that lack lux. Any who have no ties to divinity anymore, whether it be their creation story or otherwise taken from them (Hollow-kin)
@@ -206,6 +214,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_TRITON,\
 )
 
 /// Local royalty, this should not be changed.
@@ -223,6 +233,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_TRITON,\
 )
 
 #define RACES_PLAYER_COURT_PHYSICIAN list(\
@@ -239,6 +251,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_TRITON,\
 )
 
 /// Foreigner Nobility Species -  this should not be changed.
@@ -256,6 +270,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_HOLLOWKIN,\
 	SPEC_ID_HALF_ORC,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_TRITON,\
 )
 
 /// Nonnative species - Anything not native to the world.
@@ -273,6 +289,8 @@
 	SPEC_ID_KOBOLD,\
 	SPEC_ID_RAKSHARI,\
 	SPEC_ID_HOLLOWKIN,\
+	SPEC_ID_MEDICATOR,\
+	SPEC_ID_TRITON,\
 )
 
 /// Species that use the base human body, adjusted or otherwise
