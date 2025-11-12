@@ -238,9 +238,14 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	flavortext = null
 	headshot_link = null
 
+	// SHIFTING ROSES EDIT - PATRON FOR ALL
+	/*
 	// C/parent can be a client_interface
 	if(isclient(parent))
 		patreon = parent?.patreon?.has_access(ACCESS_ASSISTANT_RANK)
+	*/
+	patreon = TRUE // done here to avoid merge conflicts with the definition :)
+	// END SHIFTING ROSES EDIT
 
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		custom_names[custom_name_id] = get_default_name(custom_name_id)
