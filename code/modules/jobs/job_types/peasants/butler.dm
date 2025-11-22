@@ -76,6 +76,7 @@
 	else
 		armor = /obj/item/clothing/shirt/dress/gen/colored/maid
 		shirt = /obj/item/clothing/shirt/undershirt
+		pants = /obj/item/clothing/pants/tights
 		shoes = /obj/item/clothing/shoes/ridingboots
 		cloak = /obj/item/clothing/cloak/apron
 		belt = /obj/item/storage/belt/leather/cloth/lady

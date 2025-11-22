@@ -35,6 +35,7 @@
 	ring = /obj/item/clothing/ring/silver
 	gloves = /obj/item/clothing/gloves/leather
 	belt = /obj/item/storage/belt/leather/mercenary
+	pants = /obj/item/clothing/pants/trou/leather
 	beltr = /obj/item/storage/magebag/poor
 	beltl = /obj/item/weapon/knife/dagger/steel/special //remnant from when they were a noble
 	shoes = /obj/item/clothing/shoes/nobleboot

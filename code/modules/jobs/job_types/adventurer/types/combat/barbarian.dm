@@ -27,6 +27,7 @@
 	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.add_spell(/datum/action/cooldown/spell/undirected/barbrage)
 	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/trou/leather
 	shoes = /obj/item/clothing/shoes/boots/leather
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	if(prob(50))

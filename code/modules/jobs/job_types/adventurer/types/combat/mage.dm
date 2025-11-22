@@ -17,6 +17,7 @@
 	head = /obj/item/clothing/head/roguehood/colored/mage
 	shoes = /obj/item/clothing/shoes/simpleshoes
 	armor = /obj/item/clothing/shirt/robe/colored/mage
+	pants = /obj/item/clothing/pants/trou/leather
 	belt = /obj/item/storage/belt/leather/rope
 	backr = /obj/item/storage/backpack/satchel
 	beltr = /obj/item/storage/magebag/poor

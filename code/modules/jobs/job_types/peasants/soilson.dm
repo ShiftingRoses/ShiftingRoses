@@ -76,6 +76,7 @@
 	else
 		head = /obj/item/clothing/head/armingcap
 		armor = /obj/item/clothing/shirt/dress/gen/colored/random
+		pants = /obj/item/clothing/pants/tights/colored/random
 		shirt = /obj/item/clothing/shirt/undershirt
 	shoes = /obj/item/clothing/shoes/simpleshoes
 	belt = /obj/item/storage/belt/leather/rope

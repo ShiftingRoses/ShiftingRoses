@@ -31,13 +31,10 @@
 	backl = /obj/item/storage/backpack/satchel
 	armor = /obj/item/clothing/armor/leather/vest/colored/butcher
 	shoes = /obj/item/clothing/shoes/boots/leather
+	pants = /obj/item/clothing/pants/trou/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	backpack_contents = list(/obj/item/kitchen/spoon, /obj/item/reagent_containers/food/snacks/truffles, /obj/item/weapon/knife/hunting)
 
-	if(H.gender == MALE)
-		pants = /obj/item/clothing/pants/trou
-		wrists = /obj/item/clothing/wrists/bracers/leather
-	else
-		shirt = /obj/item/clothing/shirt/dress/gen/colored/random
 
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Used to dismembering live stock, desensitized to it.
 
