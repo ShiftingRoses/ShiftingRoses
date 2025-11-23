@@ -20,6 +20,7 @@
 	shoes = /obj/item/clothing/shoes/shortboots
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/brown
 	armor = /obj/item/clothing/shirt/robe/colored/plain
+	pants = /obj/item/clothing/pants/trou/leather
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	belt = /obj/item/storage/belt/leather/rope
 	beltr = /obj/item/storage/belt/pouch/coins/poor

@@ -43,6 +43,7 @@
 		H.change_stat(STATKEY_END, 1)
 	else
 		armor = /obj/item/clothing/shirt/dress
+		pants = /obj/item/clothing/pants/tights/colored/random
 		shoes = /obj/item/clothing/shoes/shortboots
 		neck = /obj/item/storage/belt/pouch/coins/mid
 		belt = /obj/item/storage/belt/leather

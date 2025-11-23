@@ -18,6 +18,7 @@
 	head = /obj/item/clothing/head/roguehood/colored/black
 	shoes = /obj/item/clothing/shoes/simpleshoes
 	armor = /obj/item/clothing/shirt/robe/colored/black
+	pants = /obj/item/clothing/pants/tights/colored/black
 	belt = /obj/item/storage/belt/leather/rope
 	neck = /obj/item/clothing/neck/mana_star //Stolen from the academy, dude trust
 	backr = /obj/item/storage/backpack/satchel
