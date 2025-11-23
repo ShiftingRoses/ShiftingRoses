@@ -594,7 +594,7 @@
 		if(skipface && user.has_flaw(/datum/charflaw/hunted) && user != src)
 			user.add_stress(/datum/stress_event/hunted)
 
-	if(!obscure_name && (flavortext || headshot_link)) // only show flavor text if there is a flavor text and we show headshot
+	if(!obscure_name && (flavortext || headshot_link || ooc_notes)) // only show flavor text if there is a flavor text and we show headshot
 
 		. += "<a href='?src=[REF(src)];task=view_flavor_text;'>Examine Closer</a>"
 

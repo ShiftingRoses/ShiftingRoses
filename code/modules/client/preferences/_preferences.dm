@@ -127,6 +127,8 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	/// text of your flavor
 	var/flavortext
 
+	var/ooc_notes
+
 	/// The species this character is.
 	var/datum/species/pref_species = new /datum/species/human/northern() //Mutant race
 	/// The patron/god/diety this character worships
@@ -237,6 +239,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	flavortext = null
 	headshot_link = null
+	ooc_notes = null
 
 	/*
 	// C/parent can be a client_interface
@@ -449,7 +452,12 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	if(headshot_link != null)
 		dat += "<br><img src='[headshot_link]' width='100px' height='100px'>"
 	dat += "<br><b>Flavortext:</b> <a href='?_src_=prefs;preference=flavortext;task=input'>Change</a>"
-	dat += "<br></td>"
+
+	dat += "<br><b>OOC Notes:</b> <a href='?_src_=prefs;preference=ooc_notes;task=input'>Change</a>"
+
+	dat += "</td>"
+
+
 
 	dat += "</tr></table>"
 	//-----------END OF BODY TABLE-----------//
@@ -1268,7 +1276,18 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 					flavortext = new_flavortext
 					to_chat(user, "<span class='notice'>Successfully updated flavortext</span>")
 					log_game("[user] has set their flavortext'.")
-
+				if("ooc_notes")
+					to_chat(user, "<span class='notice'>["<span class='bold'>If you put 'anything goes' or 'no limits' here, do not be surprised if people take you up on it.</span>"]</span>")
+					var/new_ooc_notes = browser_input_text(user, "Input your OOC preferences:", "OOC notes", ooc_notes, multiline = TRUE)
+					if(new_ooc_notes == null)
+						return
+					if(new_ooc_notes == "")
+						ooc_notes = null
+						ShowChoices(user)
+						return
+					ooc_notes = new_ooc_notes
+					to_chat(user, "<span class='notice'>Successfully updated OOC notes.</span>")
+					log_game("[user] has set their OOC notes'.")
 				if("s_tone")
 					var/listy = pref_species.get_skin_list()
 					var/new_s_tone = browser_input_list(user, "CHOOSE YOUR HERO'S [uppertext(pref_species.skin_tone_wording)]", "THE SUN", listy)
@@ -1670,6 +1689,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	character.headshot_link = headshot_link
 	character.flavortext = flavortext
+	character.ooc_notes = ooc_notes
 	character.pronouns = pronouns
 	character.voice_type = voice_type
 

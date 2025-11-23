@@ -107,6 +107,7 @@
 
 	var/headshot_link = null
 	var/flavortext = null
+	var/ooc_notes = null
 
 	var/confession_points = 0 // Used to track how many confessions the Inquisitor has gotten signed. Used to buy items at mailboxes.
 	var/purchase_history = null // Used to track what the Inquisitor has bought from the mailbox.
