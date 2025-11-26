@@ -24476,9 +24476,6 @@
 /obj/structure/table/wood/large/corner_new{
 	dir = 10
 	},
-/obj/structure/table/wood/large/corner_new{
-	dir = 10
-	},
 /turf/open/floor/carpet,
 /area/rogue/indoors/town/tavern)
 "oOv" = (
