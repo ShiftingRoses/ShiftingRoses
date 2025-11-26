@@ -33335,7 +33335,6 @@
 /turf/open/floor/ruinedwood/turned,
 /area/rogue/outdoors/town/roofs)
 "uuU" = (
-/obj/structure/chair/stool,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
@@ -33345,6 +33344,7 @@
 /obj/machinery/light/fueled/wallfire/candle/blue{
 	pixel_y = -32
 	},
+/obj/structure/well,
 /turf/open/floor/church,
 /area/rogue/indoors/town/clinic_large)
 "uva" = (
