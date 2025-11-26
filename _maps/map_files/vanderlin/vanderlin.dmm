@@ -2520,11 +2520,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/rogue/indoors/butchershop)
-"bvQ" = (
-/obj/structure/hotspring,
-/obj/effect/falling_sakura,
-/turf/open/floor/naturalstone,
-/area/rogue/indoors/town/bath)
 "bwf" = (
 /obj/structure/fake_machine/scomm,
 /turf/open/floor/wood,
@@ -14488,12 +14483,6 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town)
-"izG" = (
-/obj/effect/waterfall{
-	pixel_y = 0
-	},
-/turf/open/water/bath,
-/area/rogue/indoors/town/bath)
 "izM" = (
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_x = 32;
@@ -31842,7 +31831,6 @@
 /area/rogue/indoors/town/manor/servanthead)
 "tsp" = (
 /obj/structure/hotspring/border/seven,
-/obj/effect/falling_sakura,
 /turf/open/floor/grass,
 /area/rogue/indoors/town/bath)
 "tss" = (
@@ -34609,6 +34597,10 @@
 /obj/item/reagent_containers/glass/cup,
 /turf/open/floor/blocks/stonered,
 /area/rogue/indoors/town/manor/feast)
+"vhH" = (
+/obj/effect/waterfall,
+/turf/open/water/bath,
+/area/rogue/indoors/town/bath)
 "vhQ" = (
 /obj/structure/stairs{
 	dir = 4
@@ -124081,7 +124073,7 @@ jAZ
 nPj
 hRe
 qww
-bvQ
+hRe
 hRe
 hRe
 hRe
@@ -128120,10 +128112,10 @@ gdv
 kMW
 xXb
 xXb
-izG
-izG
-izG
 xXb
+vhH
+vhH
+vhH
 xXb
 xXb
 kMW
