@@ -21225,15 +21225,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/concrete,
 /area/rogue/indoors/town)
-"mRW" = (
-/obj/structure/chair/wood/alt{
-	dir = 4
-	},
-/obj/structure/table/wood/large/corner_new{
-	dir = 10
-	},
-/turf/open/floor/carpet,
-/area/rogue/indoors/town/tavern)
 "mSa" = (
 /obj/machinery/light/fueled/torchholder{
 	dir = 1
@@ -26059,8 +26050,7 @@
 /turf/open/floor/blocks,
 /area/rogue/under/dungeon)
 "pQx" = (
-/obj/structure/gate/bars{
-	gid = "keepgatenorth";
+/obj/structure/gate/bars/preopen{
 	redstone_id = "keepgatenorth"
 	},
 /turf/open/floor/metal/alt,
@@ -103645,7 +103635,7 @@ fGK
 aWm
 jZz
 poV
-mRW
+ifR
 jZz
 jZz
 jZz
